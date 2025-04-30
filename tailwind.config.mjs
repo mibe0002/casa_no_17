@@ -31,8 +31,8 @@ export default {
 
       /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
       fontFamily: {
-        Outfit: ["Outfit", "sans-serif"],
-        Agrandir: ["Agrandir", "sans-serif"] /* eksempel på ekstra font */,
+        outfit: ["outfit", "sans-serif"],
+        agrandir: ["agrandir", "sans-serif"] /* eksempel på ekstra font */,
       },
 
       /* Borders - borderstørrelser herunder */

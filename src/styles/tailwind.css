@@ -1,10 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 
-@plugin '@tailwindcss/typography';
+@plugin "@tailwindcss/typography";
 @plugin '@tailwindcss/forms';
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+  /* Font */
+  --font-outfit: "outfit", sans-serif;
+
+  /* Colors */
+  --color-brun-0: #ffffff;
+  --color-brun-25: #faf9f8;
+  --color-brun-50: #f6f1ef;
+  --color-brun-100: #ece3df;
+  --color-brun-200: #dbc9c2;
+  --color-brun-300: #c8ada2;
+  --color-brun-400: #b79485;
+  --color-brun-500: #a57865;
+  --color-brun-600: #87604f;
+  --color-brun-700: #64473a;
+  --color-brun-800: #443028;
+  --color-brun-900: #201713;
 }
 
 @layer base {
@@ -20,31 +37,27 @@
   @font-face {
     font-family: "agrandir";
     font-style: normal;
-    /* font-weight: 400; */
     src: url("..font/agrandir.woff2") format("woff2");
-  },
+  }
 
-  /* generelle styles */
-  * {
-    @apply text-brun-900
-    @apply bg-brun-25
+  body {
+    background-color: var(--color-brun-25);
   }
 
   footer {
-    @apply bg-brun-800
+    background-color: var(--color-brun-800);
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply font-Outfit;
-    @apply font-bold;
-  },
+    font-family: "outfit";
+  }
 
   p {
-    @apply font-agrandir;
-  },
+    font-family: "agrandir";
+  }
 }
 
 @layer components {
