@@ -8,13 +8,43 @@
 }
 
 @layer base {
-  *,
+  /* *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  } */
+
+  /* fonts */
+  @font-face {
+    font-family: "agrandir";
+    font-style: normal;
+    /* font-weight: 400; */
+    src: url("..font/agrandir.woff2") format("woff2");
+  },
+
+  /* generelle styles */
+  * {
+    @apply text-brun-900
+    @apply bg-brun-25
   }
+
+  footer {
+    @apply bg-brun-800
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-Outfit;
+    @apply font-bold;
+  },
+
+  p {
+    @apply font-agrandir;
+  },
 }
 
 @layer components {
