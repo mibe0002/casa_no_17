@@ -1,7 +1,51 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/logo.svg';
 import Link from './Link.astro';
 import Button from './Button.astro';
 ---
-<div>
-Header - tilføj navigation mm.
+<!-- Mobil menu -->
+<div class="w-full h-auto">
+    <div class="flex justify-between items-center px-10 py-6">
+        <a href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
+            <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
+        </a>
+        <button id="burgerButton" class="lg:hidden transition-transform duration-150 active:scale-105 hover:scale-105">
+            <svg id="burgerIcon" xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="rgba(68, 48, 40, 1)">
+                <path id="burgerLines" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+            
+                <!-- Kryds ikonet -->
+                <path id="closeLines" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <nav id="mobileMenu" class="lg:hidden hidden transition-all duration-300 pt-8 pb-10 bg-brun-800 px-10 py-6">
+        <div class="flex flex-col gap-10">
+            <ul class="uppercase font-outfit text-brun-25 text-2xl font-bold flex flex-col gap-8">
+                <li><a href="/priser">Priser</a></li>
+                <li><a href="/om-os">Om os</a></li>
+                <li><a href="/galleri">Galleri</a></li>
+                <li><a href="/#åbningstider">Åbningstider</a></li>
+            </ul>
+            <a href="#" class="uppercase w-full text-center px-7 py-4 rounded-[30px] outline-2 outline-brun-25">Book tid</a>
+         </div>
+    </nav>
 </div>
+
+<script>
+    // JavaScript
+const burgerButton = document.getElementById('burgerButton');
+const mobileMenu = document.getElementById('mobileMenu');
+const burgerLines = document.getElementById('burgerLines');
+const closeLines = document.getElementById('closeLines');
+
+burgerButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+
+  // Skift ikon
+  burgerLines.classList.toggle('hidden');
+  closeLines.classList.toggle('hidden');
+});
+</script>
