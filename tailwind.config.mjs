@@ -37,16 +37,16 @@ export default {
 
       /* Borders - borderstørrelser herunder */
       borderWidth: {
-        default: "0px",
+        default: "0",
         2: "2px",
       },
 
       /* Border radius størrelser herunder */
-      borderRadius: {
-        default: "0",
-        30: "30px",
-        5: "5px",
-      },
+      // borderRadius: {
+      //   default: "0",
+      //   button: "1.875rem",
+      //   card: "0.313rem",
+      // },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],

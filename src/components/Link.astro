@@ -1,30 +1,30 @@
 ---
 // Henter parametrene fra Astro.props
-const { href="#", target="_self", variant="textlink", size="standard"} = Astro.props;
+const { href="#", target="_self", variant="menu-small", size="small"} = Astro.props;
 
 //Alle knapper
-const linkStyling = "transition-colors duration-500 no-underline text-blue-950"; 
+const linkStyling = "transition-colors duration-500 no-underline font-outfit text-brun-25"; 
+
+// text-Colors-Brown-25 text-2xl font-bold  uppercase"
 
 //Forskellige knapper (farver o.lign.)
 const variantClasses = {
 // "textlink":"hover:underline",
 // "other setting": "bg-pink-200 hover:bg-pink-100 hover:text-grey-700 rounded-full",
-"primary": "font-bold font-dynapuff relative transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gradient-to-r from-pink-500 before:origin-center before:h-[4px] before:w-0 hover:underline-offset-2 hover:before:w-[30%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gradient-to-l from-pink-500 after:origin-center after:h-[4px] after:w-0 hover:after:w-[30%] after:bottom-0 after:right-[50%]",
-"secondary": "font-regular font-montserrat relative transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gradient-to-r from-pink-500 before:origin-center before:h-[4px] before:w-0 hover:underline-offset-2 hover:before:w-[30%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gradient-to-l from-pink-500 after:origin-center after:h-[4px] after:w-0 hover:after:w-[30%] after:bottom-0 after:right-[50%]"
+"menu-small": "font-bold uppercase",
+"menu-large": "font-bold uppercase text-brun-900 no-underline inline-block py-[10px] px-[20px] relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:bg-brun-800 after:transition-[width,left] after:duration-300 hover:after:w-full hover:after:left-0",
 // Animation fra: https://tailwindflex.com/@cagarcia2011/underline-hover-effect af Carlos Adrian Garcia
 };
 
 //Forskellige størrelser
 const sizeClasses = {
 // "medium": "px-10 py-4 text-base",
-"smallm": "text-m-body py-m-xxs",
-"smalld": "text-d-body py-d-xxs",
-"standard":"text-m-h4 py-m-xs",
+"small": "text-2xl",
+"medium": "text-base",
 "large": "text-d-h4 py-m-xs",
 };
 ---
-<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<!-- <link class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></link> -->
 
+<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
 <a href={href} target={target} class:list={[linkStyling, variantClasses[variant],
 sizeClasses[size]]}><slot /></a>

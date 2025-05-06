@@ -1,7 +1,71 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/logo.svg';
 import Link from './Link.astro';
 import Button from './Button.astro';
 ---
-<div>
-Header - tilføj navigation mm.
+<div class="w-full h-auto">
+    <div class="flex justify-between items-center px-10 lg:px-20 py-6 lg:py-4 border-b border-brun-800">
+        <div class="hidden lg:flex items-center justify-between w-screen">
+            <ul class="flex gap-16">
+                <li><Link href="/priser" variant="menu-large" size="medium">Priser</Link></li>
+                <li><Link href="/om-os" variant="menu-large" size="medium">Om os</Link></li>
+                <li><Link href="/galleri" variant="menu-large" size="medium">Galleri</Link></li>
+            </ul>
+
+            <a href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
+                <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
+            </a>
+
+            <div class="flex gap-16 items-baseline">
+                <Link href="/#åbningstider" variant="menu-large" size="medium">Åbningstider</Link></li>
+                <Button variant="lb" size="desktop">Book tid</Button>
+            </div>
+        </div>
+
+        <a href="/" class="block lg:hidden transition-transform duration-200 active:scale-105 hover:scale-105">
+            <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
+        </a>
+
+        <!-- Mobil menu -->
+        <button id="burgerButton" class="lg:hidden transition-transform duration-150 active:scale-105 hover:scale-105">
+            <svg id="burgerIcon" xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="rgba(68, 48, 40, 1)">
+                <path id="burgerLines" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+            
+                <!-- Kryds ikonet -->
+                <path id="closeLines" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <nav id="mobileMenu" class="lg:hidden hidden transition-all duration-300 pt-8 pb-10 bg-brun-800 px-10 py-6">
+        <div class="flex flex-col gap-10">
+            <ul class="uppercase font-outfit flex flex-col gap-8">
+                <li><Link href="/priser">Priser</Link></li>
+                <li><Link href="/om-os">Om os</Link></li>
+                <li><Link href="/galleri">Galleri</Link></li>
+                <li><Link href="/#åbningstider">Åbningstider</Link></li>
+            </ul>
+            <Button>
+                <Link href="#" size="medium">Book tid</Link>
+            </Button>
+         </div>
+    </nav>
 </div>
+
+<script>
+    // JavaScript
+const burgerButton = document.getElementById('burgerButton');
+const mobileMenu = document.getElementById('mobileMenu');
+const burgerLines = document.getElementById('burgerLines');
+const closeLines = document.getElementById('closeLines');
+
+burgerButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+
+  // Skift ikon
+  burgerLines.classList.toggle('hidden');
+  closeLines.classList.toggle('hidden');
+});
+</script>
