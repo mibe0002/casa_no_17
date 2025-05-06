@@ -4,12 +4,30 @@ import logo from '../assets/images/logo.svg';
 import Link from './Link.astro';
 import Button from './Button.astro';
 ---
-<!-- Mobil menu -->
 <div class="w-full h-auto">
-    <div class="flex justify-between items-center px-10 py-6">
-        <a href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
+    <div class="flex justify-between items-center px-10 lg:px-20 py-6 lg:py-4 border-b border-brun-800">
+        <div class="hidden lg:flex items-center justify-between w-screen">
+            <ul class="flex gap-16">
+                <li><Link href="/priser" variant="menu-large" size="medium">Priser</Link></li>
+                <li><Link href="/om-os" variant="menu-large" size="medium">Om os</Link></li>
+                <li><Link href="/galleri" variant="menu-large" size="medium">Galleri</Link></li>
+            </ul>
+
+            <a href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
+                <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
+            </a>
+
+            <div class="flex gap-16 items-baseline">
+                <Link href="/#åbningstider" variant="menu-large" size="medium">Åbningstider</Link></li>
+                <Button variant="lb" size="desktop">Book tid</Button>
+            </div>
+        </div>
+
+        <a href="/" class="block lg:hidden transition-transform duration-200 active:scale-105 hover:scale-105">
             <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
         </a>
+
+        <!-- Mobil menu -->
         <button id="burgerButton" class="lg:hidden transition-transform duration-150 active:scale-105 hover:scale-105">
             <svg id="burgerIcon" xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="rgba(68, 48, 40, 1)">
                 <path id="burgerLines" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
@@ -23,13 +41,15 @@ import Button from './Button.astro';
 
     <nav id="mobileMenu" class="lg:hidden hidden transition-all duration-300 pt-8 pb-10 bg-brun-800 px-10 py-6">
         <div class="flex flex-col gap-10">
-            <ul class="uppercase font-outfit text-brun-25 text-2xl font-bold flex flex-col gap-8">
-                <li><a href="/priser">Priser</a></li>
-                <li><a href="/om-os">Om os</a></li>
-                <li><a href="/galleri">Galleri</a></li>
-                <li><a href="/#åbningstider">Åbningstider</a></li>
+            <ul class="uppercase font-outfit flex flex-col gap-8">
+                <li><Link href="/priser">Priser</Link></li>
+                <li><Link href="/om-os">Om os</Link></li>
+                <li><Link href="/galleri">Galleri</Link></li>
+                <li><Link href="/#åbningstider">Åbningstider</Link></li>
             </ul>
-            <a href="#" class="uppercase w-full text-center px-7 py-4 rounded-[30px] outline-2 outline-brun-25">Book tid</a>
+            <Button>
+                <Link href="#" size="medium">Book tid</Link>
+            </Button>
          </div>
     </nav>
 </div>

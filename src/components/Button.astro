@@ -1,33 +1,28 @@
 ---
 import "../styles/tailwind.css";
 
+// ...rest Tillader at komponent kan have props såsom id, class, onclick osv. på sig. 
 // Henter parametrene fra Astro.props
-
-const { variant = "primary", size = "desktop" } = Astro.props;
+const { variant = "db", size = "mobile", ...rest} = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
-
 const buttonStyling =
-  "rounded-knapper font-dynapuff font-medium hover:jello-horizontal";
+  "rounded-[1.875rem] font-outfit font-bold uppercase";
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
-
 const variantClasses = {
-  primary: "bg-pink-500 text-blue-50 hover:bg-pink-600",
-
-  secondary: "bg-pink-300 text-blue-950 hover:bg-pink-400",
+  db: "border border-2 border-brun-25 text-brun-25 hover:bg-brun-25 hover:text-brun-800 hover:duration-300",
+  lb: "border border-2 border-brun-800 text-brun-800 hover:bg-brun-800 hover:text-brun-25 hover:duration-300",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
-
 const sizeClasses = {
-  desktop: "px-d-s py-d-xs",
-
-  mobile: "px-d-xs py-d-xs",
+  mobile: "px-8 py-4 text-sm",
+  desktop: "px-12 py-4 text-base",
 };
 ---
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}
-  ><slot /></button
->
+<button type="button" class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]} {...rest} class={rest.class}>
+  <slot />
+</button>

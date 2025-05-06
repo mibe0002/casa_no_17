@@ -22,6 +22,10 @@
   --color-brun-700: #64473a;
   --color-brun-800: #443028;
   --color-brun-900: #201713;
+
+  /* BorderRadius */
+  /* --rounded-button: 1.875rem;
+  --rounded-card: 0.313rem; */
 }
 
 @layer base {
