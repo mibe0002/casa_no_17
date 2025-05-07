@@ -5,6 +5,7 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import Aabningstider from '../components/Aabningstider.astro';
 import Services from '../components/Services.astro';
+import GoogleCard from "../components/GoogleCard.astro";
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import hero from "../assets/images/hero_image.jpg";
@@ -73,5 +74,121 @@ import Salon from "../assets/images/index_salon.png";
   <section>
 	<Services></Services>
   </section>
+
+  <section class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] gap-xs GoogleCards px-3xl">
+			<GoogleCard
+					url="https://dk.trustpilot.com/users/582341310000ff000a55a769"
+
+					cardimage="../images/william.png"
+
+					cardimagealt="Et par der danser ballroom"
+
+					navn="William D. Birch"
+
+					dato="20. jun. 2024"
+
+					titel="Bedste beslutning!"
+
+					review="Hvis man gerne vil ud og rejse, men også vil møde nogle nye mennesker. Så vil jeg helt klart anbefale Höjskolendk. Jeg havde den fedeste tur"
+
+					>
+
+			</GoogleCard>
+
+            <GoogleCard
+					url="https://dk.trustpilot.com/users/667420749867ff814c47b4a8"
+
+					cardimage="../images/dicte.png"
+
+					cardimagealt="Et par der danser ballroom"
+
+					navn="Dicte Jørgensen"
+
+					dato="20. jun. 2024"
+
+					titel="En rejse for livet"
+
+					review="At have rejst verden rundt med höjskolendk, har uden tvivl været en af de bedste beslutninger nogensinde! At rejse rundt med så mange"
+
+					>
+
+			</GoogleCard>
+
+            <GoogleCard
+					url="https://dk.trustpilot.com/users/66784e7475540f080c962edf"
+
+					cardimage="../images/kamilla.png"
+
+					cardimagealt="Et par der danser ballroom"
+
+					navn="Kamilla Hansen"
+
+					dato="20. jun. 2024"
+
+					titel="En rejse for livet"
+
+					review="Hvis man gerne vil ud og rejse, men også vil møde nogle nye mennesker. Så vil jeg helt klart anbefale Höjskolendk. Jeg havde den fedeste tur"
+
+					>
+
+			</GoogleCard>
+
+            <GoogleCard
+					url="https://dk.trustpilot.com/users/66743f35aed1957bc1511913"
+
+					cardimage="../images/signe.png"
+
+					cardimagealt="Et par der danser ballroom"
+
+					navn="Signe Christensen"
+
+					dato="20. jun. 2024"
+
+					titel="Verdens bedste højskole"
+
+					review="Höjskolendk giver en tryg og sikker rejseform. Man har altid sine rejseledere at læne sig op ad, hvilket er skønt"
+
+					>
+
+			</GoogleCard>
+  </section>
+
+
+
 </MainLayout>
 
+
+
+
+
+
+<style>
+@media only screen and (max-width: 768px) {
+     .GoogleCards {
+        display: flex;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        padding-left: 36px;
+        padding-right: 36px;
+        gap: 20px;
+        scroll-padding: 10px;
+        /* Hides scrollbar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        .GoogleCards::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+        }
+        .GoogleCards .card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        }
+
+        /* Hvis af en eller anden årsag, at scrollbar ikke hides, så justeres farven på scrollbar*/
+        .GoogleCards {
+        scrollbar-color: #214F5F transparent;
+        }
+    }
+</style>

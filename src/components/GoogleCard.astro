@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import fivestars from "../assets/images/fivestars.svg";
+import Profil from "../assets/images/CardsProfil.svg";
+
+const { url="#", cardimage="", cardimagealt="", 
+
+navn="", dato="", titel="", review="" } = Astro.props;
+---
+<article class="bg-brun-0 py-s px-sm min-w-64 max-w-64 rounded-medium">
+    <div class="grid grid-cols-[1fr_4fr] gap-xxs">
+        <Image src={Profil} alt={cardimagealt} class="" loading="lazy"/>
+        <div class="">
+            <h2 class="text-xs font-semibold">{navn}</h2>
+            <p class="text-[10px]">{dato}</p>
+        </div>
+    </div>
+
+    <div class="pt-xxs"></div>
+<Image src={fivestars} alt="trustpilot" class="" loading="lazy"/>
+<p class="font-semibold py-xxs">{titel}</p>
+<p>{review}</p>
+<a href={url} class="font-semibold text-xs">Læs mere</a>
+
+</article>
