@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import fivestars from "../assets/images/fivestars.svg";
+import Profil from "../assets/images/CardsProfil.svg";
+
+const { url="#", cardimage="", cardimagealt="", titel="", link="" } = Astro.props;
+---
+
+<div class="bg-brun-25 text-brun-25 rounded-lg overflow-hidden relative group">
+    <div class="w-full h-[460px] object-cover">
+             <img src={cardimage} alt={cardimagealt} loading="lazy">
+        </div>
+        <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
+            <p class="text-2xl font-bold">{titel}</p>
+          <hr class="border-brun-25 my-2" />
+          <a href={url} class="text-base underline hover:opacity-80">Læs mere &gt;</a>
+    </div>
+</div>

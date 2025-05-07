@@ -3,9 +3,7 @@ import { Image } from "astro:assets";
 import fivestars from "../assets/images/fivestars.svg";
 import Profil from "../assets/images/CardsProfil.svg";
 
-const { url="#", cardimage="", cardimagealt="", 
-
-navn="", dato="", titel="", review="" } = Astro.props;
+const { url="#", cardimage="", cardimagealt="", navn="", dato="", review="" } = Astro.props;
 ---
 <article class="bg-brun-0 py-s px-sm min-w-64 max-w-64 rounded-medium">
     <div class="grid grid-cols-[1fr_4fr] gap-xxs">
@@ -18,7 +16,6 @@ navn="", dato="", titel="", review="" } = Astro.props;
 
     <div class="pt-xxs"></div>
 <Image src={fivestars} alt="trustpilot" class="" loading="lazy"/>
-<p class="font-semibold py-xxs">{titel}</p>
 <p>{review}</p>
 <a href={url} class="font-semibold text-xs">Læs mere</a>
 
