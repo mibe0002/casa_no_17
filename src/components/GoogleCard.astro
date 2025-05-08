@@ -2,21 +2,24 @@
 import { Image } from "astro:assets";
 import fivestars from "../assets/images/fivestars.svg";
 import Profil from "../assets/images/CardsProfil.svg";
+import Google from "../assets/images/Google_Logo.svg";
 
 const { url="#", cardimage="", cardimagealt="", navn="", dato="", review="" } = Astro.props;
 ---
-<article class="bg-brun-0 py-s px-sm min-w-64 max-w-64 rounded-medium">
-    <div class="grid grid-cols-[1fr_4fr] gap-xxs">
+<article class="bg-brun-0 py-10 px-10 min-w-80 lg:min-h-72 lg:max-h-72 rounded-lg">
+    <div class="grid grid-cols-[1fr_4fr] gap-4">
         <Image src={Profil} alt={cardimagealt} class="" loading="lazy"/>
         <div class="">
-            <h2 class="text-xs font-semibold">{navn}</h2>
-            <p class="text-[10px]">{dato}</p>
+            <p class="text-base	font-outfit">{navn}</h2>
+            <p class="text-[12px]">{dato}</p>
         </div>
     </div>
 
-    <div class="pt-xxs"></div>
+    <div class="pt-3.5">
 <Image src={fivestars} alt="trustpilot" class="" loading="lazy"/>
 <p>{review}</p>
-<a href={url} class="font-semibold text-xs">Læs mere</a>
-
+</div>
+<a href={url} class="flex items-baseline">
+    <Image src={Google} alt="Google" class="" loading="lazy"/>
+</a>
 </article>

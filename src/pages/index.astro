@@ -6,14 +6,14 @@ import Link from '../components/Link.astro';
 import Aabningstider from '../components/Aabningstider.astro';
 import ServiceCards from '../components/Services.astro';
 import GoogleCard from "../components/GoogleCard.astro";
+import ServiceCard from "../components/ServiceCard.astro";
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
 import hero from "../assets/images/hero_image.jpg";
 import desktopImage from "../assets/images/hero1.png";
 import mobileImage from "../assets/images/hero2.png";
 import LogoLight from "../assets/images/index_logo_light.svg";
 import Salon from "../assets/images/index_salon.png";
-import ServiceCard from "../components/ServiceCard.astro";
+import Saks from "../assets/images/index_saks.gif";
 ---
 <MainLayout title="Casa No. 17">
 	 <section>
@@ -76,7 +76,7 @@ import ServiceCard from "../components/ServiceCard.astro";
         SALON PÅ<br class="block md:hidden" /> NØRREBRO
       </h2>
 
-      <p class="text-base leading-relaxed max-w-md mb-8">
+      <p class="text-base leading-relaxed lg:px-32 mb-8">
         Casa 17 blev etableret ud fra et ønske om at skabe et hyggeligt og rart sted, hvor alle er velkomne. Vi gør vores bedste for at skabe en indbydende stemning, hvor man kan føle sig godt tilpas. Vi tager altid udgangspunkt i kunden og sætter en ære i at finde lige netop den frisure og/eller hårfarve, der klæder den enkelte kunde.
       </p>
 
@@ -92,16 +92,16 @@ import ServiceCard from "../components/ServiceCard.astro";
   </section>
 
   
-  <article id="åbningstider" class="flex justify-center">
+  <article id="åbningstider" class="flex justify-center ">
 	<Aabningstider class="flex items-center"></Aabningstider>
   </article>
 
-  
-<div class="max-w-7xl mx-auto px-6 py-12">
-    <div class="grid md:grid-cols-3 gap-16">
+  <div class="flex justify-center background">
+    <div class="max-w-7xl xl:max-w-[1536px] px-6 py-12 ">
+      <div class="grid md:grid-cols-3 gap-16">
 
     <ServiceCard
-					url="https://dk.trustpilot.com/users/582341310000ff000a55a769"
+					url="https://salonbook.one/?casa17#/"
 
 					cardimage="../images/service1.png"
 
@@ -113,7 +113,7 @@ import ServiceCard from "../components/ServiceCard.astro";
 			</ServiceCard>
 
       <ServiceCard
-					url="https://dk.trustpilot.com/users/582341310000ff000a55a769"
+					url="/priser"
 
 					cardimage="../images/service2.png"
 
@@ -125,7 +125,7 @@ import ServiceCard from "../components/ServiceCard.astro";
 			</ServiceCard>
 
       <ServiceCard
-					url="https://dk.trustpilot.com/users/582341310000ff000a55a769"
+					url="/om-os"
 
 					cardimage="../images/service3.png"
 
@@ -135,10 +135,29 @@ import ServiceCard from "../components/ServiceCard.astro";
 					>
 
 			</ServiceCard>
+      </div>
     </div>
 </div>
 
-  <section class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] gap-xs GoogleCards px-3xl">
+<section class="bg-brun-800">
+
+  <div class="flex items-center px-10 lg:px-20">
+    <div class="flex-grow border-t border-brun-25"></div>
+      <span class="px-4 max-w-[110px] items-center">
+          <Image class="" src={Saks} alt="Saks der bevæger sig" loading="lazy"/>
+      </span>
+    <div class="flex-grow border-t border-brun-25"></div>
+  </div>
+
+
+</section>
+
+  <section class="">
+    <div class="">
+      <h3 class="uppercase font-bold text-4xl lg:text-6xl text-center px-14 md:px-0  pt-12 lg:pt-16">Hvad vores <wbr>kunder siger</h3>
+    </div>
+
+    <div class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] gap-8 GoogleCards pt-12 pb-4 lg:pt-16 lg:pb-20 lg:px-20">
 			<GoogleCard
 					url="https://dk.trustpilot.com/users/582341310000ff000a55a769"
 
@@ -198,9 +217,11 @@ import ServiceCard from "../components/ServiceCard.astro";
 					>
 
 			</GoogleCard>
+      </div>
   </section>
 
-
+  <section class="pt-16 md:pt-0">
+  </section>
 
 </MainLayout>
 
@@ -210,32 +231,47 @@ import ServiceCard from "../components/ServiceCard.astro";
 
 
 <style>
+
+  .background {
+   background: linear-gradient(0deg, #443028 60%, #FAF9F8 40%);
+}
 @media only screen and (max-width: 768px) {
-     .GoogleCards {
-        display: flex;
-        overflow: auto;
-        scroll-snap-type: x mandatory;
-        padding-left: 36px;
-        padding-right: 36px;
-        gap: 20px;
-        scroll-padding: 10px;
-        /* Hides scrollbar */
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE and Edge */
-        }
 
-        .GoogleCards::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, and Opera */
-        }
-        .GoogleCards .card {
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        }
+.GoogleCards {
+    display: flex;
+    overflow-x: auto; /* Only horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    padding-left: 36px;
+    padding-right: 36px;
+    gap: 20px;
+    scroll-padding: 10px;
 
-        /* Hvis af en eller anden årsag, at scrollbar ikke hides, så justeres farven på scrollbar*/
-        .GoogleCards {
-        scrollbar-color: #214F5F transparent;
-        }
+    /* Remove these to show the scrollbar */
+    /* scrollbar-width: none; */
+    /* -ms-overflow-style: none; */
+    
+    /* Optional: show custom scrollbar in Firefox */
+    scrollbar-color: #443028 transparent;
+  }
+
+  .GoogleCards::-webkit-scrollbar {
+    display: block; /* Show scrollbar in WebKit browsers */
+    height: 8px; /* Optional: customize scrollbar height */
+  }
+
+  .GoogleCards::-webkit-scrollbar-thumb {
+    background-color: #443028; /* Optional: scrollbar thumb color */
+    border-radius: 4px;
+  }
+
+  .GoogleCards .card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+          .background {
+   background: linear-gradient(0deg, #443028 90%, #FAF9F8 10%);
+}
     }
 </style>
