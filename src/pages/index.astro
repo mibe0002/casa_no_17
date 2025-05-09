@@ -16,26 +16,39 @@ import Salon from "../assets/images/index_salon.png";
 import Saks from "../assets/images/index_saks.gif";
 ---
 <MainLayout title="Casa No. 17">
-	 <section>
-    <div class="">
-      <div class="w-full">
-        <MyCustomImage
-          mobileImgUrl={mobileImage}
-          desktopImgUrl={desktopImage}
-          alt="Video af frisørsalonens ydelser"/>
+	
+  <section class="relative w-full h-screen overflow-hidden">
+  <!-- Video Background -->
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute top-0 left-0 w-full h-full object-cover"
+  >
+    <source src="/video/hero_video.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Overlay for contrast -->
+  <!-- <div class="absolute inset-0 bg-black/30 z-10"></div> -->
+
+  <!-- Content -->
+  <div class="relative z-20 flex items-center justify-center h-full text-center px-4">
+    <div class="text-white max-w-2xl">
+      <p class="text-base md:text-base mb-2">Frisørsalon i hjertet af København</p>
+      <h1 class="text-4xl lg:text-6xl font-bold mb-4">NY STIL – NY DIG</h1>
+      <p class="text-2xl md:text-xl mb-6 leading-relaxed">
+        Hos os er du garanteret høj kvalitet og kreativ inspiration til dit næste look.
+      </p>
+      <div class="flex flex-col items-center gap-4">
+        <Button class="uppercase">BOOK TID</Button>
+        <p class="text-sm">
+          Eller ring på <a href="tel:+4535350080" class="text-brun-25">+45 35 35 00 80</a>
+        </p>
       </div>
-
-	<div class="flex absolute items-center justify-center inset-0">
-	  <div class="grid grid-rows-[1fr_3fr_1fr]">
-		<p class="text-brun-25 flex align-bottom justify-center">Frisørsalon i hjertet af København</p>
-		<h1 class="text-brun-25 lg:text-6xl font-bold uppercase flex justify-center">Ny stil - ny dig</h1>
-		<p class="text-brun-25 flex align-bottom justify-center text-center">Hos os er du garanteret høj kvalitet og kreativ inspiration til dit næste look.</p>
-	  </div>
-	</div>
-
-   
     </div>
-  </section>
+  </div>
+</section>
 
   <section>
 	<p>banner</p>
