@@ -14,6 +14,9 @@ import mobileImage from "../assets/images/hero2.png";
 import LogoLight from "../assets/images/index_logo_light.svg";
 import Salon from "../assets/images/index_salon.png";
 import Saks from "../assets/images/index_saks.gif";
+import Wella from "../assets/images/wella.svg";
+import Icon from "../assets/images/icon.svg";
+import Evo from "../assets/images/evo.svg";
 ---
 <MainLayout title="Casa No. 17">
 	
@@ -30,29 +33,38 @@ import Saks from "../assets/images/index_saks.gif";
   </video>
 
   <!-- Overlay for contrast -->
-  <!-- <div class="absolute inset-0 bg-black/30 z-10"></div> -->
+  <div class="absolute inset-0 bg-brun-800/30 z-10"></div>
 
   <!-- Content -->
-  <div class="relative z-20 flex items-center justify-center h-full text-center px-4">
+  <div class="relative z-20 flex items-center justify-center h-full text-center px-4 md:pt-24">
     <div class="text-white max-w-2xl">
-      <p class="text-base md:text-base mb-2">Frisørsalon i hjertet af København</p>
+      <p class="text-sm md:text-base mb-2">Frisørsalon i hjertet af København</p>
       <h1 class="text-4xl lg:text-6xl font-bold mb-4">NY STIL – NY DIG</h1>
-      <p class="text-2xl md:text-xl mb-6 leading-relaxed">
+      <p class="text-2xl md:text-3xl mb-6 leading-relaxed">
         Hos os er du garanteret høj kvalitet og kreativ inspiration til dit næste look.
       </p>
-      <div class="flex flex-col items-center gap-4">
+      <div class="flex flex-col items-center gap-4 pt-30">
         <Button class="uppercase">BOOK TID</Button>
         <p class="text-sm">
-          Eller ring på <a href="tel:+4535350080" class="text-brun-25">+45 35 35 00 80</a>
+          Eller ring på <a href="tel:+4535350080" class="text-brun-25 no-underline inline-block py-[5px] px-[5px] relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:bg-brun-25 after:transition-[width,left] after:duration-300 hover:after:w-full hover:after:left-0">+45 35 35 00 80</a>
         </p>
       </div>
     </div>
   </div>
 </section>
 
-  <section>
-	<p>banner</p>
-  </section>
+<div class="logo-banner">
+    <div class="logo-track gap-[80px] md:gap-[100px] lg:gap-[300px]">
+      <Image class="lg:hover:scale-110 duration-300" src={Wella} alt="Wella" loading="lazy"/>
+      <Image class="lg:hover:scale-110 duration-300" src={Icon} alt="ICON" loading="lazy"/>
+      <Image class="lg:hover:scale-110 duration-300" src={Evo} alt="Evo" loading="lazy"/>
+
+      <!-- Duplicate for seamless scrolling on mobile -->
+      <Image class="md:hidden" src={Wella} alt="Wella" loading="lazy"/>
+      <Image class="md:hidden" src={Icon} alt="ICON" loading="lazy"/>
+      <Image class="md:hidden" src={Evo} alt="Evo" loading="lazy"/>
+    </div>
+  </div>
 
 
  <!-- <div class="flex h-screen">
@@ -248,8 +260,46 @@ import Saks from "../assets/images/index_saks.gif";
   .background {
    background: linear-gradient(0deg, #443028 60%, #FAF9F8 40%);
 }
+
+.logo-banner {
+      height: 200px;
+      overflow: hidden;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-track {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-track img {
+      height: 100px;
+      max-width: 100%;
+      object-fit: contain;
+    }
 @media only screen and (max-width: 768px) {
 
+.logo-banner {
+        justify-content: flex-start;
+      }
+
+      .logo-track {
+        animation: scrollLeft 10s linear infinite;
+        width: max-content;
+      }
+
+      @keyframes scrollLeft {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
 .GoogleCards {
     display: flex;
     overflow-x: auto; /* Only horizontal scrolling */
