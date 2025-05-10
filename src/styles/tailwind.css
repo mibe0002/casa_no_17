@@ -52,7 +52,7 @@
     background-color: var(--color-brun-800);
   }
 
-  h1,
+  /* h1,
   h2,
   h3,
   h4 {
@@ -61,10 +61,45 @@
 
   p {
     font-family: "agrandir";
-  }
+  } */
 }
 
 @layer components {
 }
+
 @layer utilities {
+  /* underline hover effect */
+  .link-underline-hover::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 2px;
+    width: 0;
+    background-color: var(--link-underline-color, #443028); /* fallback color brun-800 */
+    transition-property: width, left;
+    transition-duration: 300ms;
+  }
+
+  .link-underline-hover {
+    @apply relative;
+  }
+
+  .link-underline-hover:hover::after {
+    left: 0;
+    width: 100%;
+  }
+
+  .link-underline-25 {
+    --link-underline-color: #faf9f8; /* brun-25 */
+  }
+
+  .link-underline-bottom-0::after {
+    bottom: 0;
+  }
+
+  .link-underline-bottom-2::after {
+    bottom: -0.5rem; /* bottom-2 */
+  }
 }
+
+/*css use in html = link-underline-hover link-underline-800/25 link-underline-bottom-0/2 */

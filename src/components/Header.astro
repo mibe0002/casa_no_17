@@ -5,7 +5,7 @@ import Link from './Link.astro';
 import Button from './Button.astro';
 ---
 <div class="w-full h-auto">
-    <div class="flex justify-between items-center px-10 lg:px-20 py-6 lg:py-4 border-b border-brun-800">
+    <div class="flex justify-between items-center px-10 lg:px-20 py-6 lg:py-4 border-b border-brun-800 bg-brun-25">
         <div class="hidden lg:flex items-center justify-between w-screen">
             <ul class="flex gap-16">
                 <li><Link href="/priser" variant="menu-large" size="medium">Priser</Link></li>
@@ -19,7 +19,9 @@ import Button from './Button.astro';
 
             <div class="flex gap-16 items-baseline">
                 <Link href="/#åbningstider" variant="menu-large" size="medium">Åbningstider</Link></li>
-                <Button variant="lb" size="desktop">Book tid</Button>
+                <Button variant="lb" size="desktop">
+                    <a href="https://salonbook.one/?casa17#/" target="_blank">Book tid</a>
+                </Button>
             </div>
         </div>
 
@@ -48,7 +50,7 @@ import Button from './Button.astro';
                 <li><Link href="/#åbningstider">Åbningstider</Link></li>
             </ul>
             <Button>
-                <Link href="#" size="medium">Book tid</Link>
+                <a href="https://salonbook.one/?casa17#/" target="_blank" class="text-base">Book tid</a>
             </Button>
          </div>
     </nav>
