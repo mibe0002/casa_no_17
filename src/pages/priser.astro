@@ -1,15 +1,124 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Pris from '../components/Pris.astro';
 import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
+import Brands from '../components/Brands.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import hairdryer from "../assets/images/hairdryer.svg";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+<MainLayout title="Priser">
+	<section>
+		<div class="flex items-center mt-10 mb-6">
+			<div class="flex-grow border-t border-brun-900"></div>
+			<h1 class="text-4xl uppercase font-bold font-outfit px-[30px]">Priser</h1>
+			<div class="flex-grow border-t border-brun-900"></div>
+		</div>
+		<div>
+			<h2>Klip</h2>
+			<Pris service="Dameklip m. vask/føn" pris="730 kr.">
+			</Pris>
+			<Pris service="Herreklip m. vask/føn" pris="630 kr.">
+			</Pris>
+			<Pris service="Juniorklip 6-12 år" pris="490 kr.">
+			</Pris>
+			<Pris service="Børneklip 0-5 år" pris="390 kr.">
+			</Pris>
+		</div>
+		<div>
+			<h2>Striber</h2>
+			<Pris service="Striber i top/reperation" pris="Fra 800 kr.">
+			</Pris>
+			<Pris service="Striber i hele håret" pris="Fra 1.400 kr.">
+			</Pris>
+		</div>
+		<div>
+			<h2>STRIBER MED KLIP</h2>
+			<Pris service="Striber i top/reparation inkl. klip" pris="Fra 1.530 kr.">
+			</Pris>
+			<Pris service="Striber hele håret inkl. klip" pris="Fra 2.130 kr.">
+			</Pris>
+		</div>
+		<div>
+			<h2>HELFARVE</h2>
+			<Pris service="Helfarve i bund" pris="Fra 750 kr.">
+			</Pris>
+			<Pris service="Helfarve ud i længder" pris="Fra 900 kr">
+			</Pris>
+		</div>
+		<div>
+			<h2>HELFARVE MED KLIP</h2>
+			<Pris service="Helfarve i bund inkl. klip" pris="Fra 1.480 kr.">
+			</Pris>
+			<Pris service="Helfarve ud i længder inkl. klip" pris="Fra 1.630 kr.">
+			</Pris>
+		</div>
+		<div>
+			<h2>BRYN & VIPPER</h2>
+			<Pris service="Bryn og vipper" pris="320 kr.">
+			</Pris>
+			<Pris service="Bryn m. farve" pris="130 kr.">
+			</Pris>
+			<Pris service="Vipper" pris="190 kr.">
+			</Pris>
+		</div>
+		<div>
+			<h2>HÅRKUR</h2>
+			<Pris service="Hårkur" pris="Fra 250 kr.">
+			</Pris>
+		</div>
+		<div>
+			<h2>OPSÆTNING & FØN</h2>
+			<Pris service="Vask og føn">
+			</Pris>
+			<Pris service="Håropsætninger" pris="Kontakt salonen">
+			</Pris>
+		</div>
+		<div>
+			<Image class="" src={hairdryer} alt="Føntørrer gif" loading="lazy"/>
+			<Button>Book tid</Button>
+			<p>OBS Vores farvebehandlinger er fra priser, da der kan komme tillæg på ved ekstra langt/tykt hår. Derudover tages der forbehold for prisstigninger og tastefejl.</p>
+		</div>
+	</section>
+	<section>
+		<div class="flex items-center mt-10 mb-6">
+			<div class="flex-grow border-t border-brun-900"></div>
+			<h1 class="text-4xl uppercase font-bold font-outfit px-[30px]">Brands</h1>
+			<div class="flex-grow border-t border-brun-900"></div>
+		</div>
+		<div>
+			<div class="mx-20 mb-20">
+			  <div class="flex items-center flex-col lg:flex-row gap-10">
+				<Brands
+				  image="../img/brand_evo1.jpg"
+				  imagealt="Produkter"
+				  titel="EVO"
+				  navn="The Great Hydrator"
+				  beskrivelse="Moisture Mask"
+				/>
+				<Brands
+				  image="../img/brand_evo1.jpg"
+				  imagealt="Produkter"
+				  titel="EVO"
+				  navn="The Great Hydrator"
+				  beskrivelse="Moisture Mask"
+				/>
+				<Brands
+				  image="../img/brand_evo1.jpg"
+				  imagealt="Produkter"
+				  titel="EVO"
+				  navn="The Great Hydrator"
+				  beskrivelse="Moisture Mask"
+				/>
+			  </div>
+			  <div class="mt-2">
+				<p>
+				  <span class="font-bold uppercase text-brun-900 leading-relaxed">
+					Obs
+				  </span>
+				  Viste produkter kan kun købes i salonen, og ikke online
+				</p>
+			  </div>
+			</div>
+		</div>
+	</section>
 </MainLayout>
