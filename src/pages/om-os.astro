@@ -16,25 +16,44 @@ import camilla from "../assets/images/camilla.jpg";
 
 <MainLayout title="Om os">
   <!-- Overskrift -->
-  <div class="flex items-center mt-20 mb-10 mx-10 lg:mx-20">
+  <!-- <div class="flex items-center mt-20 mb-10 mx-10 lg:mx-20">
     <div class="flex-grow border-t border-brun-900"></div>
-    <span class="px-4 text-4xl font-bold lg:text-7xl text-center uppercase"
+    <span
+      class="px-4 text-4xl text-brun-900 text-center uppercase font-bold lg:text-6xl"
       ><h1>Frisøren på Blågårdsgade</h1></span
     >
     <div class="flex-grow border-t border-brun-900"></div>
+  </div> -->
+
+  <div class="flex items-center mt-10 lg:pt-20 mb-6 lg:mx-20 lg:mb-24">
+    <div class="flex-grow border-t border-brun-900 lg:min-w-6"></div>
+    <h1
+      class="text-4xl text-center lg:text-6xl uppercase font-bold font-outfit px-[8px] lg:px-[30px]"
+    >
+      Frisør på blågårdsgade
+    </h1>
+    <div class="flex-grow border-t border-brun-900 lg:min-w-6"></div>
   </div>
 
   <section>
     <div class="flex flex-col lg:flex-row h-auto lg:h-screen">
       <!-- Billedet -->
-      <div class="w-full lg:w-2/5 h-64 lg:h-auto">
+      <div class="w-full lg:w-2/5 h-[500px] lg:h-auto">
+        <Image
+          class="w-full h-full object-cover"
+          src={facade}
+          alt="Billedet viser salon Casa No 17's facade."
+          loading="lazy"
+        />
+      </div>
+      <!-- <div class="w-full lg:w-2/5 h-64 lg:h-auto">
         <Image
           class="w-full h-full object-contain lg:object-cover"
           src={facade}
           alt="Billedet viser salon Casa No 17's facade."
           loading="lazy"
         />
-      </div>
+      </div> -->
       <div
         class="w-full lg:w-3/5 bg-brun-800 text-brun-25 flex flex-col justify-center px-6 sm:px-12 lg:px-32 py-12"
       >
@@ -248,12 +267,14 @@ import camilla from "../assets/images/camilla.jpg";
     </div>
   </section>
   <!-- Overskrift 2 -->
-  <div class="flex items-center mb-10 mx-20">
-    <div class="flex-grow border-t border-brun-900"></div>
-    <span class="px-4 text-4xl lg:text-7xl font-bold text-center uppercase"
-      ><h1>Camilla, frisør og ejer</h1></span
+  <div class="flex items-center mt-10 lg:pt-20 mb-6 lg:mx-20 lg:mb-24">
+    <div class="flex-grow border-t border-brun-900 lg:min-w-6"></div>
+    <h1
+      class="text-4xl text-center lg:text-6xl lg:text-left uppercase font-bold font-outfit px-[8px] lg:px-[30px]"
     >
-    <div class="flex-grow border-t border-brun-900"></div>
+      Camilla, frisør og ejer
+    </h1>
+    <div class="flex-grow border-t border-brun-900 lg:min-w-6"></div>
   </div>
 
   <section>
@@ -295,9 +316,9 @@ import camilla from "../assets/images/camilla.jpg";
       </div>
 
       <!-- Billedsektion -->
-      <div class="w-full lg:w-2/5 h-64 sm:h-80 md:h-96 lg:h-auto">
+      <div class="w-full lg:w-2/5 h-[500px] lg:h-auto order-[-1] lg:order-1">
         <Image
-          class="w-full h-full object-contain lg:object-cover object-center"
+          class="w-full h-full object-cover"
           src={camilla}
           alt="Billedet viser ejeren og frisør Camilla, som er i gang med at klippe hår på en kunde."
           loading="lazy"
@@ -386,23 +407,50 @@ import camilla from "../assets/images/camilla.jpg";
       </div>
     </section> -->
 
-  <section>
+  <section id="åbningstider" class="flex justify-center">
     <Aabningstider class="flex items-center" />
   </section>
 
-  <section>
-    <div class="flex flex-col lg:flex-row">
+  <section class="w-full max-w-none">
+    <div class="flex flex-col lg:flex-row w-full">
       <!-- Billede -->
-      <div class="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-auto">
+      <div class="w-full lg:w-1/2 h-[300px] lg:h-auto">
         <Image
-          class="w-full h-full object-contain lg:object-cover object-center"
+          class="w-full h-full object-cover"
           src={sofa}
           alt="Billedet viser venteområdet i salonen med en sort sofa og brunt træbord."
           loading="lazy"
         />
       </div>
-
       <!-- Tekst -->
+      <div
+        class="w-full lg:w-1/2 bg-brun-800 text-brun-25 flex flex-col justify-center px-6 sm:px-12 lg:px-16 py-12"
+      >
+        <div>
+          <h2 class="text-3xl lg:text-5xl font-bold uppercase mb-6">Kontakt</h2>
+          <p class="leading-relaxed mb-3">
+            Blågårdsgade 17<br />
+            2200 København N
+          </p>
+          <p class="leading-relaxed mb-3">Tlf. 3535 0080</p>
+          <p class="leading-relaxed mb-3">Vedstedcamilla@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section>
+    <div class="flex flex-col lg:flex-row">
+   
+      <div class="w-full md:w-2/5 h-[300px] md:h-auto">
+        <Image
+          class="w-full h-full object-cover"
+          src={sofa}
+          alt="Billedet viser venteområdet i salonen med en sort sofa og brunt træbord."
+          loading="lazy"
+        />
+      </div>
+    
       <div
         class="w-full lg:w-1/2 bg-brun-800 text-brun-25 flex flex-col justify-center px-6 sm:px-12 lg:px-32 py-12"
       >
@@ -418,7 +466,7 @@ import camilla from "../assets/images/camilla.jpg";
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Kontakt -->
   <!-- <section>
@@ -456,7 +504,8 @@ import camilla from "../assets/images/camilla.jpg";
   <!-- Overskrift 3 -->
   <div class="flex items-center mb-10 mt-20 mx-20">
     <div class="flex-grow border-t border-brun-900"></div>
-    <span class="px-4 text-4xl lg:text-7xl font-bold text-center uppercase"
+    <span
+      class="px-4 text-4xl text-brun-900 font-bold text-center uppercase lg:text-6xl"
       ><h1>Brands</h1></span
     >
     <div class="flex-grow border-t border-brun-900"></div>
