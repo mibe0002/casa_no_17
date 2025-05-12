@@ -55,9 +55,9 @@ import Evo from "../assets/images/evo.svg";
 
 <div class="logo-banner">
     <div class="logo-track gap-[80px] md:gap-[100px] lg:gap-[300px]">
-      <Image class="lg:hover:scale-110 duration-300" src={Wella} alt="Wella" loading="lazy"/>
-      <Image class="lg:hover:scale-110 duration-300" src={Icon} alt="ICON" loading="lazy"/>
-      <Image class="lg:hover:scale-110 duration-300" src={Evo} alt="Evo" loading="lazy"/>
+      <a href="https://www.wella.com/professional/da-DK/home"><Image class="lg:hover:scale-110 duration-300" src={Wella} alt="Wella" loading="lazy"/></a>
+      <a href="https://iconproducts.dk/"><Image class="lg:hover:scale-110 duration-300" src={Icon} alt="ICON" loading="lazy"/></a>
+      <a href="https://evohairstore.com/"><Image class="lg:hover:scale-110 duration-300" src={Evo} alt="Evo" loading="lazy"/></a>
 
       <!-- Duplicate for seamless scrolling on mobile -->
       <Image class="md:hidden" src={Wella} alt="Wella" loading="lazy"/>
@@ -93,17 +93,19 @@ import Evo from "../assets/images/evo.svg";
   <section class="flex flex-col md:flex-row h-screen">
     <!-- Left/Text Side -->
     <div class="bg-brun-800 text-brun-25 w-full md:w-3/5 p-10 flex flex-col justify-center items-center">
-      <div class="mb-6 flex items-center scale-50	lg:scale-75">
+      <div class="mb-6 lg:mb-18 flex items-center scale-50	lg:scale-75">
         <Image class="" src={LogoLight} alt="Casa No 17 logo" loading="lazy"/>
       </div>
 
-      <h2 class="text-brun-25 text-4xl lg:text-6xl font-bold mb-6 leading-tight md:text-left">
-        SALON PÅ<br class="block md:hidden" /> NØRREBRO
-      </h2>
+      <div class="">
+        <h2 class="text-brun-25 text-4xl lg:text-6xl font-bold mb-6 leading-tight text-center md:text-left lg:px-20">
+          SALON PÅ<br class="block md:hidden" /> NØRREBRO
+        </h2>
 
-      <p class="text-base leading-relaxed lg:px-32 mb-8">
-        Casa 17 blev etableret ud fra et ønske om at skabe et hyggeligt og rart sted, hvor alle er velkomne. Vi gør vores bedste for at skabe en indbydende stemning, hvor man kan føle sig godt tilpas. Vi tager altid udgangspunkt i kunden og sætter en ære i at finde lige netop den frisure og/eller hårfarve, der klæder den enkelte kunde.
-      </p>
+        <p class="text-base leading-relaxed lg:px-20 mb-8 lg:mb-24">
+          Casa 17 blev etableret ud fra et ønske om at skabe et hyggeligt og rart sted, hvor alle er velkomne. Vi gør vores bedste for at skabe en indbydende stemning, hvor man kan føle sig godt tilpas. Vi tager altid udgangspunkt i kunden og sætter en ære i at finde lige netop den frisure og/eller hårfarve, der klæder den enkelte kunde.
+        </p>
+      </div>
 
       <div class="flex justify-center">
         <Button class="uppercase">Læs mere</Button>
@@ -111,7 +113,7 @@ import Evo from "../assets/images/evo.svg";
     </div>
 
     <!-- Right/Image Side -->
-    <div class="w-full md:w-2/5 h-[50vh] md:h-auto order-[-1] lg:order-1">
+    <div class="w-full md:w-2/5 h-[280px] md:h-auto order-[-1] lg:order-1">
       <Image class="w-full h-full object-cover" src={Salon} alt="Salon interior" loading="lazy"/>
     </div>
   </section>
@@ -122,7 +124,7 @@ import Evo from "../assets/images/evo.svg";
   </article>
 
   <div class="flex justify-center background">
-    <div class="max-w-7xl xl:max-w-[1536px] px-6 py-12 ">
+    <div class="max-w-7xl xl:max-w-[1536px] px-6 pb-12 pt- md:py-12 ">
       <div class="grid md:grid-cols-3 gap-16">
 
     <ServiceCard
@@ -177,73 +179,73 @@ import Evo from "../assets/images/evo.svg";
 
 </section>
 
-  <section class="">
-    <div class="">
-      <h3 class="uppercase font-bold text-4xl lg:text-6xl text-center px-14 md:px-0  pt-12 lg:pt-16">Hvad vores <wbr>kunder siger</h3>
+<section class="">
+  <div class="">
+    <h3 class="uppercase font-bold text-4xl lg:text-6xl text-center px-14 md:px-0  pt-12 lg:pt-16">Hvad vores <wbr>kunder siger</h3>
+  </div>
+
+  <div class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] gap-8 GoogleCards pt-12 pb-4 lg:pt-16 lg:pb-20 lg:px-20">
+    <GoogleCard
+        url="https://dk.trustpilot.com/users/582341310000ff000a55a769"
+
+        cardimagealt="Et par der danser ballroom"
+
+        navn="Thomas Jeppson"
+
+        dato="For 10 dage siden"
+
+        review="Den bedste frisør på Nørrebro! Hyggelig og god! Kan sit kram! Og Camilla er sød og rar!"
+
+        >
+
+    </GoogleCard>
+
+          <GoogleCard
+        url="https://dk.trustpilot.com/users/667420749867ff814c47b4a8"
+
+        cardimagealt="Et par der danser ballroom"
+
+        navn="N. Kragh"
+
+        dato="For 2 måneder siden"
+
+        review="Altid super godt arbejde og dejlig behandling 👍"
+
+        >
+
+    </GoogleCard>
+
+          <GoogleCard
+        url="https://dk.trustpilot.com/users/66784e7475540f080c962edf"
+
+        cardimagealt="Et par der danser ballroom"
+
+        navn="Mette Risbo Jessen"
+
+        dato="For 8 måneder siden"
+
+        review="Altid god service"
+
+        >
+
+    </GoogleCard>
+
+          <GoogleCard
+        url="https://dk.trustpilot.com/users/66743f35aed1957bc1511913"
+
+        cardimagealt="Et par der danser ballroom"
+
+        navn="Benjamin Rud Elberth"
+
+        dato="For 1 år siden"
+
+        review="Camilla er jo bare fantastisk. Det koster noget. Men du får hvad du betaler for. En dejlig oplevelse."
+
+        >
+
+    </GoogleCard>
     </div>
-
-    <div class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] gap-8 GoogleCards pt-12 pb-4 lg:pt-16 lg:pb-20 lg:px-20">
-			<GoogleCard
-					url="https://dk.trustpilot.com/users/582341310000ff000a55a769"
-
-					cardimagealt="Et par der danser ballroom"
-
-					navn="Thomas Jeppson"
-
-					dato="For 10 dage siden"
-
-					review="Den bedste frisør på Nørrebro! Hyggelig og god! Kan sit kram! Og Camilla er sød og rar!"
-
-					>
-
-			</GoogleCard>
-
-            <GoogleCard
-					url="https://dk.trustpilot.com/users/667420749867ff814c47b4a8"
-
-					cardimagealt="Et par der danser ballroom"
-
-					navn="N. Kragh"
-
-					dato="For 2 måneder siden"
-
-					review="Altid super godt arbejde og dejlig behandling 👍"
-
-					>
-
-			</GoogleCard>
-
-            <GoogleCard
-					url="https://dk.trustpilot.com/users/66784e7475540f080c962edf"
-
-					cardimagealt="Et par der danser ballroom"
-
-					navn="Mette Risbo Jessen"
-
-					dato="For 8 måneder siden"
-
-					review="Altid god service"
-
-					>
-
-			</GoogleCard>
-
-            <GoogleCard
-					url="https://dk.trustpilot.com/users/66743f35aed1957bc1511913"
-
-					cardimagealt="Et par der danser ballroom"
-
-					navn="Benjamin Rud Elberth"
-
-					dato="For 1 år siden"
-
-					review="Camilla er jo bare fantastisk. Det koster noget. Men du får hvad du betaler for. En dejlig oplevelse."
-
-					>
-
-			</GoogleCard>
-      </div>
-  </section>
+</section>
 
   <section class="pt-16 md:pt-0">
   </section>
