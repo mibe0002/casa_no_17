@@ -1,16 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import MyCustomImage from "../components/MyCustomImage.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import Aabningstider from '../components/Aabningstider.astro';
-import ServiceCards from '../components/Services.astro';
-import GoogleCard from "../components/GoogleCard.astro";
 import ServiceCard from "../components/ServiceCard.astro";
+import HoverPic from "../components/HoverPic.astro";
+import GoogleCard from "../components/GoogleCard.astro";
 import { Image } from 'astro:assets';
-import hero from "../assets/images/hero_image.jpg";
-import desktopImage from "../assets/images/hero1.png";
-import mobileImage from "../assets/images/hero2.png";
 import LogoLight from "../assets/images/index_logo_light.svg";
 import Salon from "../assets/images/index_salon.png";
 import Saks from "../assets/images/index_saks.gif";
@@ -176,7 +172,63 @@ import Evo from "../assets/images/evo.svg";
     <div class="flex-grow border-t border-brun-25"></div>
   </div>
 
+</section>
 
+<section class="bg-brun-800">
+<div class="grid grid-cols-2 md:grid-cols-3 mx-10 md:mx-20 gap-3.5 md:gap-16 py-12">
+  <HoverPic
+					
+					image="../images/g1.png"
+
+					imagealt="Klik for at bestille tid online"
+
+					navn="Juniorklip 6-12 år"
+					>
+
+  </HoverPic>
+
+  <HoverPic
+					
+					image="../images/g2.png"
+
+					imagealt="Klik for at bestille tid online"
+
+					navn="Striber i top/reperation"
+					>
+
+  </HoverPic>
+
+  <HoverPic
+					
+					image="../images/g3.png"
+
+					imagealt="Klik for at bestille tid online"
+
+					navn="Dameklip m. vask/føn"
+					>
+
+  </HoverPic>
+
+
+  <div class="md:hidden">
+    <HoverPic
+					
+					image="../images/g4.png"
+
+					imagealt="Klik for at bestille tid online"
+
+					navn="Striber i top/reperation"
+
+          beskrivelse="Dameklip m. vask/føn"
+					>
+
+    </HoverPic>
+  </div>
+</div>
+
+<div class="flex justify-center pb-12">
+  <Button class="uppercase">Se galleri</Button>
+</div>
 </section>
 
 <section class="">
@@ -316,23 +368,23 @@ import Evo from "../assets/images/evo.svg";
     /* -ms-overflow-style: none; */
     
     /* Optional: show custom scrollbar in Firefox */
-    scrollbar-color: #443028 transparent;
   }
 
+
+  /* Custom Scrollbar */
   .GoogleCards::-webkit-scrollbar {
-    display: block; /* Show scrollbar in WebKit browsers */
-    height: 8px; /* Optional: customize scrollbar height */
+    width: auto;
+    height: 10px;
   }
-
+  .GoogleCards::-webkit-scrollbar-track {
+    background: #ECE3DF;
+  }
   .GoogleCards::-webkit-scrollbar-thumb {
-    background-color: #443028; /* Optional: scrollbar thumb color */
-    border-radius: 4px;
+    background-color: #443028; /* Scrollbar thumb color */
+    border-radius: 2px;
   }
-
-  .GoogleCards .card {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+  .GoogleCards::-webkit-scrollbar-thumb:hover {
+    background-color: #443028; /* Thumb color on hover */
   }
 
           .background {
