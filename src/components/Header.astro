@@ -14,24 +14,21 @@ import Button from './Button.astro';
                 <li><Link href="/galleri" variant="menu-large" size="medium">Galleri</Link></li>
             </ul>
 
-            <a href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
+            <Link href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
                 <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
-            </a>
+            </Link>
 
             <div class="flex gap-16 items-baseline">
-                <Link href="/#åbningstider" variant="menu-large" size="medium">Åbningstider</Link></li>
-                <Button variant="lb" size="size">
-                    <a href="https://salonbook.one/?casa17#/" target="_blank">Book tid</a>
-                </Button>
-                <Link2 variant="db" href="">
+                <Link href="/#åbningstider" variant="menu-large" size="medium">Åbningstider</Link>
+                <Link2 variant="lb" href="https://salonbook.one/?casa17#/">
                     Book tid
                 </Link2>
             </div>
         </div>
-
-        <a href="/" class="block lg:hidden transition-transform duration-200 active:scale-105 hover:scale-105">
+        
+        <Link href="/" class="block lg:hidden transition-transform duration-200 active:scale-105 hover:scale-105">
             <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
-        </a>
+        </Link>
 
         <!-- Mobil menu -->
         <button id="burgerButton" class="lg:hidden transition-transform duration-150 active:scale-105 hover:scale-105">
@@ -53,9 +50,9 @@ import Button from './Button.astro';
                 <li><Link href="/galleri">Galleri</Link></li>
                 <li><Link href="/#åbningstider">Åbningstider</Link></li>
             </ul>
-            <Button>
-                <a href="https://salonbook.one/?casa17#/" target="_blank" class="text-base">Book tid</a>
-            </Button>
+            <Link2 variant="db" href="https://salonbook.one/?casa17#/" class="text-center">
+                Book tid
+            </Link2>
          </div>
     </nav>
 </div>
