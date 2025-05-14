@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
+import Link from '../components/Link2.astro';
 import Aabningstider from '../components/Aabningstider.astro';
 import ServiceCard from "../components/ServiceCard.astro";
 import HoverPic from "../components/HoverPic.astro";
@@ -40,7 +40,7 @@ import Evo from "../assets/images/evo.svg";
         Hos os er du garanteret høj kvalitet og kreativ inspiration til dit næste look.
       </p>
       <div class="flex flex-col items-center gap-4 pt-30">
-        <Button class="uppercase">BOOK TID</Button>
+        <Link class="uppercase" variant="db" href="https://salonbook.one/?casa17#/">BOOK TID</Link>
         <p class="text-sm">
           Eller ring på <a href="tel:+4535350080" class="text-brun-25 no-underline inline-block py-[5px] px-[5px] relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:bg-brun-25 after:transition-[width,left] after:duration-300 hover:after:w-full hover:after:left-0">+45 35 35 00 80</a>
         </p>
@@ -104,7 +104,7 @@ import Evo from "../assets/images/evo.svg";
       </div>
 
       <div class="flex justify-center">
-        <Button class="uppercase">Læs mere om os</Button>
+        <Link class="uppercase" variant="db" href="/om-os">Læs mere om os</Link>
 		</div>
     </div>
 
@@ -227,7 +227,7 @@ import Evo from "../assets/images/evo.svg";
 </div>
 
 <div class="flex justify-center pb-12">
-  <Button class="uppercase">Se galleri</Button>
+  <Link class="uppercase" variant="db" href="/galleri">Se galleri</Link>
 </div>
 </section>
 
