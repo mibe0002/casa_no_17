@@ -1,15 +1,231 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import instagram from "../assets/images/ig.svg";
+import facebook from "../assets/images/fb.svg";
+import HoverPic from "../components/HoverPic.astro";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Galleri">
+  <div class="flex items-center mb-10 mt-10 lg:mt-20 mx-20">
+    <div class="flex-grow border-t border-brun-900"></div>
+    <span
+      class="px-4 text-4xl text-brun-900 font-bold text-center uppercase lg:text-6xl"
+      ><h1>Galleri</h1></span
+    >
+    <div class="flex-grow border-t border-brun-900"></div>
+  </div>
+  <section class="flex items-start gap-6 flex-wrap mx-10 mb-10 lg:mx-20">
+    <div class="flex items-center gap-4 min-w-[3rem]">
+      <a
+        href="https://www.instagram.com/casa_no_17/"
+        target="_blank"
+        class="transition-transform duration-200 active:scale-105 hover:scale-105"
+      >
+        <Image
+          src={instagram}
+          alt="Instagram ikon"
+          loading="lazy"
+          class="w-12 h-12"
+        />
+      </a>
+
+      <a
+        href="https://www.facebook.com/groups/164095825399/"
+        target="_blank"
+        class="transition-transform duration-200 active:scale-105 hover:scale-105"
+      >
+        <Image
+          src={facebook}
+          alt="Facebook ikon"
+          loading="lazy"
+          class="w-12 h-12"
+        />
+      </a>
+    </div>
+
+    <div>
+      <p class="max-w-prose leading-relaxed">
+        Få et glimt af hverdagen i salonen, bliv inspireret af smukke hårstile
+        og vær den første til at få nyheder, tips og eksklusive tilbud.
+      </p>
+    </div>
+  </section>
+
+  <!-- 
+  <section class="flex mx-10 mb-10 lg:mx-20">
+    <div class="flex items-center gap-4">
+      <a
+        href="https://www.instagram.com/casa_no_17/"
+        target="_blank"
+        class="transition-transform duration-200 active:scale-105 hover:scale-105"
+      >
+        <Image
+          src={instagram}
+          alt="Instagram ikon"
+          loading="lazy"
+          class="w-12 h-12"
+        />
+      </a>
+
+      <a
+        href="https://www.facebook.com/groups/164095825399/"
+        target="_blank"
+        class="transition-transform duration-200 active:scale-105 hover:scale-105"
+      >
+        <Image
+          src={facebook}
+          alt="Facebook ikon"
+          loading="lazy"
+          class="w-12 h-12"
+        />
+      </a>
+    </div>
+    <div>
+      <p class="max-w-prose leading-relaxed">
+        Få et glimt af hverdagen i salonen, bliv inspireret af smukke hårstile
+        og vær den første til at få nyheder, tips og eksklusive tilbud.
+      </p>
+    </div>
+  </section> -->
+
+  <!-- <section
+    class="grid grid-rows-2 lg:grid-cols-[1fr_8fr] lg:gap-0 mx-10 lg:mx-20"
+  >
+    <div class="flex gap-4">
+      <a
+        href="https://www.instagram.com/casa_no_17/"
+        target="_blank"
+        class="transition-transform duration-200 active:scale-105 hover:scale-105"
+      >
+        <Image src={instagram} alt="Instagram ikon" loading="lazy" />
+      </a>
+
+      <a
+        href="https://www.facebook.com/groups/164095825399/"
+        target="_blank"
+        class="transition-transform duration-200 active:scale-105 hover:scale-105"
+      >
+        <Image src={facebook} alt="Facebook ikon" loading="lazy" />
+      </a>
+    </div>
+    <div>
+      <p class="max-w-prose leading-relaxed">
+        Få et glimt af hverdagen i salonen, bliv inspireret af smukke hårstile
+        og vær den første til at få nyheder, tips og eksklusive tilbud.
+      </p>
+    </div>
+  </section> -->
+
+  <!-- <section class="flex gap-4 pt-5 mx-10 mb-10 lg:mx-20">
+    <div class="flex min-w-[200px]">
+      <a
+        href="https://www.instagram.com/casa_no_17/"
+        target="_blank"
+        class="transition-transform duration-200 active:scale-105 hover:scale-105"
+      >
+        <Image src={instagram} alt="Instagram ikon" loading="lazy" />
+      </a>
+
+      <a
+        href="https://www.facebook.com/groups/164095825399/"
+        target="_blank"
+        class="transition-transform duration-200 active:scale-105 hover:scale-105"
+      >
+        <Image src={facebook} alt="Facebook ikon" loading="lazy" />
+      </a>
+    </div>
+    <div>
+      <p class="max-w-prose leading-relaxed">
+        Få et glimt af hverdagen i salonen, bliv inspireret af smukke hårstile
+        og vær den første til at få nyheder, tips og eksklusive tilbud.
+      </p>
+    </div>
+  </section> -->
+  <section class="grid grid-cols-2 mx-10 mb-20 gap-5 lg:grid-cols-3 lg:mx-20">
+    <HoverPic
+      image="../img/billede_1.jpg"
+      imagealt="Billedet illustrerer en mand med kort brunt hår og mørk t-shirt."
+      titel="Herreklip"
+    />
+    <HoverPic
+      image="../img/billede_2.jpg"
+      imagealt="Billedet viser kvinde med ryggen til. Hun har håret flettet og pynt i. Hun har en hvid kjole på."
+      titel="Håropsætning til bryllup"
+    />
+    <HoverPic
+      image="../img/billede_3.jpg"
+      imagealt="Billedet viser en kvinde der vender med siden til kameraet. Hun har lyserødt hår og en hvid t-shirt på."
+      titel="Helfarve"
+    />
+    <HoverPic
+      image="../img/billede_4.jpg"
+      imagealt="Billedet viser en kvinde med ryggen til kameraet. Hun har blond bølget hår. Hun har hvid kjole på."
+      titel="Helfarve & dameklip"
+    />
+    <HoverPic
+      image="../img/billede_5.jpg"
+      imagealt="Billedet illustrer en mand der kigger ned og vender mod kameraet. Han har mørkt hår og en hvid t-shirt på."
+      titel="Herreklip"
+    />
+    <HoverPic
+      image="../img/billede_6.jpg"
+      imagealt="Billedet viser kvinde med ryggen til kameraet. Hun har rødligt hår og en stribet blå bluse på."
+      titel="Dameklip"
+    />
+    <HoverPic
+      image="../img/billede_7.jpg"
+      imagealt="Billedet viser kvinde med ryggen til kameraet. Hun har lyst hår og en grå bluse på."
+      titel="Helfarve & dameklip"
+    />
+    <HoverPic
+      image="../img/billede_8.jpg"
+      imagealt="Billedet illustrerer kvinde med ryggen til kameraet. Hun har langt krøllet hår og en hvid bluse på."
+      titel="Dameklip & styling"
+    />
+    <HoverPic
+      image="../img/billede_9.jpg"
+      imagealt="Billedet viser kvinde med ryggen til kameraet. Hun har langt mellemblondt hår og en mørk bluse på."
+      titel="Dameklip & hårkur"
+    />
+    <HoverPic
+      image="../img/billede_10.jpg"
+      imagealt="Billedet illustrerer kvinde med ryggen til kameraet. Hun har mørkt bølget hår og en mørk bluse med motiv på."
+      titel="Dameklip"
+    />
+    <HoverPic
+      image="../img/billede_11.jpg"
+      imagealt="Billedet viser kvinde med ryggen til kameraet. Hun har langt blond hår og en grå bluse på."
+      titel="Striber i hele håret"
+    />
+    <HoverPic
+      image="../img/billede_12.jpg"
+      imagealt="Billedet illustrerer kvinde med ryggen til kameraet. Hun har farvet farvet hår i forskellie farver og en hvid top på."
+      titel="Helfarve"
+    />
+    <HoverPic
+      image="../img/billede_13.jpg"
+      imagealt="Billedet viser en mand der står mod kameraet og kigger ned. Han har mørkt hår og en grå t-shirt på."
+      titel="Herreklip"
+    />
+    <HoverPic
+      image="../img/billede_14.jpg"
+      imagealt="Billedet illustrerer en kvinde med ryggen til kameraet. Hun har lagt blond hår og en mørk bluse på."
+      titel="Helfarve & dameklip"
+    />
+    <HoverPic
+      image="../img/billede_15.jpg"
+      imagealt="Billedet viser kvinde med ryggen til kameraet. Hun har rødt hår og en mørk t-shirt på."
+      titel="Håropsætning"
+    />
+    <div class="lg:hidden">
+      <HoverPic
+        image="../img/billede_16.jpg"
+        imagealt="Billedet viser mand med siden til kameraet. Han har mørkt hår og en blå skjorte på."
+        titel="Herreklip"
+      />
+    </div>
+  </section>
 </MainLayout>
