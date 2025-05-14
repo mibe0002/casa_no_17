@@ -3,16 +3,17 @@ import { Image } from 'astro:assets';
 import logo from '../assets/images/logo.svg';
 import Link from './Link.astro';
 import Link2 from './Link2.astro';
-import Button from './Button.astro';
 ---
 <div class="w-full h-auto">
     <div class="flex justify-between items-center px-10 lg:px-20 py-6 lg:py-4 border-b border-brun-800 bg-brun-25">
         <div class="hidden lg:flex items-center justify-between w-screen">
-            <ul class="flex gap-16">
-                <li><Link href="/priser" variant="large" size="medium">Priser</Link></li>
-                <li><Link href="/om-os" variant="large" size="medium">Om os</Link></li>
-                <li><Link href="/galleri" variant="large" size="medium">Galleri</Link></li>
-            </ul>
+            <nav>
+                <ul class="flex gap-16">
+                    <li><Link href="/priser" variant="large" size="medium">Priser</Link></li>
+                    <li><Link href="/om-os" variant="large" size="medium">Om os</Link></li>
+                    <li><Link href="/galleri" variant="large" size="medium">Galleri</Link></li>
+                </ul>
+            </nav>
 
             <Link href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
                 <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
