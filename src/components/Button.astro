@@ -3,7 +3,7 @@ import "../styles/tailwind.css";
 
 // ...rest Tillader at komponent kan have props såsom id, class, onclick osv. på sig. 
 // Henter parametrene fra Astro.props
-const { variant = "db", size = "mobile", ...rest} = Astro.props;
+const { variant = "db", size = "size", ...rest} = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
 const buttonStyling =
@@ -17,8 +17,9 @@ const variantClasses = {
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
-  mobile: "px-8 py-4 text-sm",
-  desktop: "px-12 py-4 text-base",
+  // mobile: "px-8 py-4 text-sm",
+  // desktop: "px-12 py-4 text-base",
+  size: "px-8 py-4 text-sm lg:px-12 py-4 text-base", 
 };
 ---
 

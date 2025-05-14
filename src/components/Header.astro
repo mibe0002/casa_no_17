@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/images/logo.svg';
 import Link from './Link.astro';
+import Link2 from './Link2.astro';
 import Button from './Button.astro';
 ---
 <div class="w-full h-auto">
@@ -19,9 +20,12 @@ import Button from './Button.astro';
 
             <div class="flex gap-16 items-baseline">
                 <Link href="/#åbningstider" variant="menu-large" size="medium">Åbningstider</Link></li>
-                <Button variant="lb" size="desktop">
+                <Button variant="lb" size="size">
                     <a href="https://salonbook.one/?casa17#/" target="_blank">Book tid</a>
                 </Button>
+                <Link2 variant="db" href="">
+                    Book tid
+                </Link2>
             </div>
         </div>
 
