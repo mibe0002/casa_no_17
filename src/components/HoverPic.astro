@@ -16,17 +16,19 @@ const {
 <div>
   <div x-data="{ open: false }" @click.away="open = false" class="relative">
     <div class="relative group">
-      <img
-        src={image}
-        alt={imagealt}
-        class="w-full h-full object-cover cursor-pointer"
-        loading="lazy"
-        @click="window.innerWidth < 768 ? open = !open : null"
-      />
+      <div class="w-full h-auto">
+        <img
+          src={image}
+          alt={imagealt}
+          class="w-full h-full object-cover cursor-pointer"
+          loading="lazy"
+          @click="window.innerWidth < 768 ? open = !open : null"
+        />
+      </div>
       <div
-      x-show="open || window.innerWidth >= 768"
-      x-transition
-      class="absolute bottom-0 left-0 w-full bg-brun-700/80 text-brun-25 p-4 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:pointer-events-none"
+        x-show="open || window.innerWidth >= 768"
+        x-transition
+        class="absolute bottom-0 left-0 w-full bg-brun-700/80 text-brun-25 p-4 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:pointer-events-none"
       >
         <p class="font-bold">{titel}</p>
         <p>{navn}</p>
@@ -36,4 +38,5 @@ const {
   </div>
 </div>
 
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+></script>
