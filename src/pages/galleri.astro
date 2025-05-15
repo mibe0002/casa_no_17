@@ -5,11 +5,11 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import instagram from "../assets/images/ig.svg";
 import facebook from "../assets/images/fb.svg";
-import HoverPic from "../components/HoverPic.astro";
+import HoverGallery from "../components/HoverGallery.astro";
 ---
 
 <MainLayout title="Galleri">
-  <div class="flex items-center mb-10 mt-10 lg:mt-20 mx-20">
+  <div class="flex items-center mb-10 mt-10 lg:mt-20 mx-10 lg:mx-20">
     <div class="flex-grow border-t border-brun-900"></div>
     <span
       class="px-4 text-4xl text-brun-900 font-bold text-center uppercase lg:text-6xl"
@@ -145,83 +145,84 @@ import HoverPic from "../components/HoverPic.astro";
     </div>
   </section> -->
   <section class="grid grid-cols-2 mx-10 mb-20 gap-5 lg:grid-cols-3 lg:mx-20">
-    <HoverPic
+    <HoverGallery
       image="../img/billede_1.jpg"
       imagealt="Billedet illustrerer en mand med kort brunt hår og mørk t-shirt."
       titel="Herreklip"
+      loading="eager"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_2.webp"
       imagealt="Billedet viser kvinde med håret flettet og pynt i. Hun har en hvid kjole på."
       titel="Håropsætning til bryllup"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_3.webp"
       imagealt="Billedet viser en kvinde med lyserødt hår og en hvid t-shirt på."
       titel="Helfarve"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_4.webp"
       imagealt="Billedet viser en kvinde med blond bølget hår. Hun har hvid kjole på."
       titel="Helfarve & dameklip"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_5.webp"
       imagealt="Billedet illustrer en mand med mørkt hår og en hvid t-shirt på."
       titel="Herreklip"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_6.webp"
       imagealt="Billedet viser kvinde med rødligt hår og en stribet blå bluse på."
       titel="Dameklip"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_7.webp"
       imagealt="Billedet viser kvinde med lyst hår og en grå bluse på."
       titel="Helfarve & dameklip"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_8.webp"
       imagealt="Billedet illustrerer kvinde med langt krøllet hår og en hvid bluse på."
       titel="Dameklip & styling"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_9.webp"
       imagealt="Billedet viser kvinde med langt mellemblondt hår og en mørk bluse på."
       titel="Dameklip & hårkur"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_10.webp"
       imagealt="Billedet illustrerer kvinde med mørkt bølget hår og en mørk bluse med motiv på."
       titel="Dameklip"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_11.webp"
       imagealt="Billedet viser kvinde med langt blond hår og en grå bluse på."
       titel="Striber i hele håret"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_12.webp"
       imagealt="Billedet illustrerer kvinde med farvet hår i forskellie farver og en hvid top på."
       titel="Helfarve"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_13.webp"
       imagealt="Billedet viser en mand med mørkt hår og en grå t-shirt på."
       titel="Herreklip"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_14.webp"
       imagealt="Billedet illustrerer en kvinde med langt blond hår og en mørk bluse på."
       titel="Helfarve & dameklip"
     />
-    <HoverPic
+    <HoverGallery
       image="../img/billede_15.jpg"
       imagealt="Billedet viser kvinde med rødt hår og en mørk t-shirt på."
       titel="Håropsætning"
     />
     <div class="lg:hidden">
-      <HoverPic
+      <HoverGallery
         image="../img/billede_16.webp"
         imagealt="Billedet viser mand med mørkt hår og en blå skjorte på."
         titel="Herreklip"
