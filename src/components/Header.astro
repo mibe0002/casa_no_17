@@ -9,9 +9,9 @@ import Link2 from './Link2.astro';
         <div class="hidden lg:flex items-center justify-between w-screen">
             <nav>
                 <ul class="flex gap-16">
-                    <li><Link href="/priser" variant="large" size="header">Priser</Link></li>
-                    <li><Link href="/om-os" variant="large" size="header">Om os</Link></li>
-                    <li><Link href="/galleri" variant="large" size="header">Galleri</Link></li>
+                    <li><Link href="/priser" variant="large" size="header" data-page="priser">Priser</Link></li>
+                    <li><Link href="/om-os" variant="large" size="header" data-page="om-os">Om os</Link></li>
+                    <li><Link href="/galleri" variant="large" size="header" data-page="galleri">Galleri</Link></li>
                 </ul>
             </nav>
 
@@ -33,10 +33,10 @@ import Link2 from './Link2.astro';
         </Link>
 
         <!-- Mobil menu -->
-        <button id="burgerButton" class="lg:hidden transition-transform duration-150 active:scale-105 hover:scale-105" aria-label="Åbn menu" aria-expanded="false">
+        <button id="burgerButton" class="lg:hidden transition-transform duration-150 active:scale-105 hover:scale-105">
             <svg id="burgerIcon" xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="rgba(68, 48, 40, 1)">
                 <path id="burgerLines" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
-            
+                <!-- aria-label="Åbn menu" aria-expanded="false" -->
                 <!-- Kryds ikonet -->
                 <path id="closeLines" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                 d="M6 18L18 6M6 6l12 12" />
@@ -79,5 +79,16 @@ burgerButton.addEventListener('click', () =>
   // Update ARIA attributes
   burgerButton.setAttribute('aria-expanded', String(!isOpen));
     burgerButton.setAttribute('aria-label', isOpen ? 'Åbn menu' : 'Luk menu');
+});
+
+const path = window.location.pathname.split("/").pop();
+const currentPage = path.includes(".html") ? path : path + ".html";
+
+document.querySelectorAll(".nav-link").forEach(link => {
+  if (link instanceof HTMLElement) {
+    if (link.dataset.page === currentPage) {
+      link.classList.add("border-b-2", "border-pink-500");
+    }
+  }
 });
 </script>
