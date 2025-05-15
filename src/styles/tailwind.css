@@ -41,7 +41,7 @@
   @font-face {
     font-family: "agrandir";
     font-style: normal;
-    src: url("..font/agrandir.woff2") format("woff2");
+    src: url("../font/agrandir.woff2") format("woff2");
   }
 
   body {
