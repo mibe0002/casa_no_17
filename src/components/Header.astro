@@ -18,7 +18,8 @@ const currentPath = Astro.url.pathname
             </nav>
 
             <Link href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
-                <Image src={logo} alt="Casa No 17s logo" loading="eager"></Image>
+                <Image src={logo} alt="" loading="eager"></Image>
+                <span class="sr-only">Gå til Casa No 17s forside</span>
             </Link>
 
             <div class="flex gap-16 items-baseline">
@@ -34,7 +35,7 @@ const currentPath = Astro.url.pathname
         </Link>
 
         <!-- Mobil menu -->
-        <button id="burgerButton" class="lg:hidden transition-transform duration-150 active:scale-105 hover:scale-105">
+        <button id="burgerButton" class="lg:hidden transition-transform duration-150 active:scale-105 hover:scale-105" aria-label="Åbn menu" aria-expanded="false">
             <svg id="burgerIcon" xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="rgba(68, 48, 40, 1)">
                 <path id="burgerLines" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
             
@@ -68,10 +69,17 @@ const burgerLines = document.getElementById('burgerLines');
 const closeLines = document.getElementById('closeLines');
 
 burgerButton.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+    const isOpen = !mobileMenu.classList.contains('hidden');
+
+burgerButton.addEventListener('click', () => 
+  mobileMenu.classList.toggle('hidden'));
 
   // Skift ikon
   burgerLines.classList.toggle('hidden');
   closeLines.classList.toggle('hidden');
+
+  // Update ARIA attributes
+  burgerButton.setAttribute('aria-expanded', String(!isOpen));
+    burgerButton.setAttribute('aria-label', isOpen ? 'Åbn menu' : 'Luk menu');
 });
 </script>
