@@ -41,11 +41,13 @@ import facebook from '../assets/images/facebook.svg';
         </address>
         <div class="flex gap-8 pt-5">
             <Link href="https://www.instagram.com/casa_no_17/" target="_blank" class="transition-transform duration-200 active:scale-105 hover:scale-105">
-                <Image src={instagram} alt="Besøg os på Instagram" loading="lazy"></Image>
+                <Image src={instagram} alt="" loading="lazy"></Image>
+                <span class="sr-only">Besøg os på Instagram</span>
             </Link>
 
             <Link href="https://www.facebook.com/groups/164095825399/" target="_blank" class="transition-transform duration-200 active:scale-105 hover:scale-105">
                 <Image src={facebook} alt="Besøg vores Facebook-gruppe" loading="lazy"></Image>
+                <span class="sr-only">Besøg vores Facebook-gruppe</span>
             </Link>
         </div>
     </div>
@@ -64,10 +66,11 @@ import facebook from '../assets/images/facebook.svg';
     <div class="flex flex-col justify-end lg:justify-start gap-8 lg:order-1 lg:justify-self-center">
         <Link href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
             <div class="max-w-[135px] lg:max-w-[200px]">
-                <Image src={logo_light} alt="Casa No 17s logo lys version" loading="lazy"
+                <Image src={logo_light} alt="" loading="lazy"
                 width={300} 
                 height={100} 
                 style="width: 100%; height: auto;" ></Image>
+                <span class="sr-only">Gå til Casa No 17s forside</span>
             </div>
         </Link>
         <p class="text-brun-25 text-sm lg:text-base font-agrandir">© 2025 Frisør Casa No. 17.<br>Alle rettigheder forbeholdes.</p>
