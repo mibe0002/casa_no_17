@@ -84,41 +84,43 @@ import Evo from "../assets/images/evo.svg";
 	<Aabningstider class="flex items-center"></Aabningstider>
 </article>
 
-<div id="services" class="flex justify-center background">
-  <div class="max-w-7xl xl:max-w-[1536px] px-6 pb-12 pt- md:py-12 ">
-    <div class="grid md:grid-cols-3 gap-16">
-      <ServiceCard url="https://salonbook.one/?casa17#/" cardimage="../images/service1.png" cardimagealt="Klik for at bestille tid online" titel="Book tid"></ServiceCard>
-      <ServiceCard url="/priser" cardimage="../images/service2.png" cardimagealt="Klik for at se salonens priser på ydelser" titel="Se vores priser"></ServiceCard>
-      <ServiceCard url="/om-os" cardimage="../images/service3.png" cardimagealt="Klik for at læse mere om hvem vi er, samt andet information" titel="Læs mere om os"></ServiceCard>
-    </div>
-  </div>
-</div>
-
-<section id="saksen" class="bg-brun-800">
-  <div class="flex items-center px-10 lg:px-20">
-    <div class="flex-grow border-t border-brun-25"></div>
-      <span class="px-4 max-w-[110px] items-center">
-          <Image class="" src={Saks} alt="Saks der bevæger sig" loading="lazy"/>
-      </span>
-    <div class="flex-grow border-t border-brun-25"></div>
-  </div>
-</section>
-
-<section id="galleri" class="bg-brun-800">
-  <div class="md:flex justify-center">
-    <div class="grid grid-cols-2 md:grid-cols-3 mx-10 md:mx-20 gap-3.5 md:gap-16 py-12 max-w-[1536px]" >
-      <HoverPic image="../images/g1.png" imagealt="Et billede der viser hvordan et Juniorklip 6-12 år ser ud" navn="Juniorklip 6-12 år"></HoverPic>
-      <HoverPic image="../images/g2.png" imagealt="Et billede der viser hvordan striber i top/reperation ser ud" navn="Striber i top/reperation"></HoverPic>
-      <HoverPic image="../images/g3.png" imagealt="Et billede der viser hvordan et dameklip m. vask/føn ser ud" navn="Dameklip m. vask/føn"></HoverPic>
-      <div class="md:hidden">
-        <HoverPic image="../images/g4.png" imagealt="Et billede der viser hvordan striber i top/reperation samt dameklip m. vask/føn ser ud" navn="Striber i top/reperation" beskrivelse="Dameklip m. vask/føn"></HoverPic>
+<section id="alt andet" class="background">
+  <div id="services" class="flex justify-center">
+    <div class="max-w-7xl xl:max-w-[1536px] px-6 pb-12 pt- md:py-12 ">
+      <div class="grid md:grid-cols-3 gap-16">
+        <ServiceCard url="https://salonbook.one/?casa17#/" cardimage="../images/service1.png" cardimagealt="Klik for at bestille tid online" titel="Book tid"></ServiceCard>
+        <ServiceCard url="/priser" cardimage="../images/service2.png" cardimagealt="Klik for at se salonens priser på ydelser" titel="Se vores priser"></ServiceCard>
+        <ServiceCard url="/om-os" cardimage="../images/service3.png" cardimagealt="Klik for at læse mere om hvem vi er, samt andet information" titel="Læs mere om os"></ServiceCard>
       </div>
     </div>
   </div>
 
-<div class="flex justify-center pb-12">
-  <Link class="uppercase" variant="db" href="/galleri">Se galleri</Link>
-</div>
+  <section id="saksen" class="bg-brun-800">
+    <div class="flex items-center px-10 lg:px-20">
+      <div class="flex-grow border-t border-brun-25"></div>
+        <span class="px-4 max-w-[110px] items-center">
+            <Image class="" src={Saks} alt="Saks der bevæger sig" loading="lazy"/>
+        </span>
+      <div class="flex-grow border-t border-brun-25"></div>
+    </div>
+  </section>
+
+  <section id="galleri" class="bg-brun-800">
+    <div class="md:flex justify-center">
+      <div class="grid grid-cols-2 md:grid-cols-3 mx-10 md:mx-20 gap-3.5 md:gap-16 py-12 max-w-[1536px]" >
+        <HoverPic image="../images/g1.png" imagealt="Et billede der viser hvordan et Juniorklip 6-12 år ser ud" navn="Juniorklip 6-12 år"></HoverPic>
+        <HoverPic image="../images/g2.png" imagealt="Et billede der viser hvordan striber i top/reperation ser ud" navn="Striber i top/reperation"></HoverPic>
+        <HoverPic image="../images/g3.png" imagealt="Et billede der viser hvordan et dameklip m. vask/føn ser ud" navn="Dameklip m. vask/føn"></HoverPic>
+        <div class="md:hidden">
+          <HoverPic image="../images/g4.png" imagealt="Et billede der viser hvordan striber i top/reperation samt dameklip m. vask/føn ser ud" navn="Striber i top/reperation" beskrivelse="Dameklip m. vask/føn"></HoverPic>
+        </div>
+      </div>
+    </div>
+
+  <div class="flex justify-center pb-12">
+    <Link class="uppercase" variant="db" href="/galleri">Se galleri</Link>
+  </div>
+  </section>
 </section>
 
 <section id="reviews" class="">
@@ -140,7 +142,7 @@ import Evo from "../assets/images/evo.svg";
 
 <style>
 .background {
-      background: linear-gradient(0deg, #443028 60%, #FAF9F8 40%);
+      background: linear-gradient(0deg, #443028 80%, #FAF9F8 20%);
     }
 
 .logo-banner {
