@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
+import Link from "../components/Link2.astro";
 import { Image } from "astro:assets";
 import facade from "../assets/images/facade.jpg";
 import Aabningstider from "../components/Aabningstider.astro";
@@ -25,7 +25,7 @@ import camilla from "../assets/images/camilla.jpg";
     <div class="flex-grow border-t border-brun-900"></div>
   </div> -->
 
-  <div class="flex items-center mt-10 lg:mt-20 mb-6 lg:mx-20 lg:mb-24">
+  <div class="flex items-center mt-10 lg:mt-20 mb-6 lg:mx-20 lg:mb-10">
     <div class="flex-grow border-t border-brun-900 lg:min-w-6"></div>
     <h1
       class="text-4xl text-center lg:text-6xl uppercase font-bold font-outfit px-[8px] lg:px-[30px]"
@@ -91,7 +91,7 @@ import camilla from "../assets/images/camilla.jpg";
           </div>
 
           <div class="flex justify-center mt-6">
-            <Button class="uppercase">Se priser</Button>
+            <Link class="uppercase" variant="db" href="/priser">Se priser</Link>
           </div>
         </div>
       </div>
@@ -230,7 +230,45 @@ import camilla from "../assets/images/camilla.jpg";
       <Button>SE PRISER</Button>
     </div>
   </section> -->
+
   <section>
+    <div class="flex flex-row justify-center my-10 lg:my-20">
+      <div class="w-1/6 lg:w-1/12">
+        <Image
+          class="w-full h-full object-contain rotation"
+          src={hairdryer}
+          alt="Billedet er en hårtørrer ..."
+          loading="lazy"
+        />
+      </div>
+      <div class="w-1/6 lg:w-1/12">
+        <Image
+          class="w-full h-full object-contain rotation"
+          src={brush}
+          alt="Billedet viser en mørkebrun børste ..."
+          loading="lazy"
+        />
+      </div>
+      <div class="w-1/6 lg:w-1/12">
+        <Image
+          class="w-full h-full object-contain rotation"
+          src={scissor}
+          alt="Billedet viser en mørkebrun saks ..."
+          loading="lazy"
+        />
+      </div>
+      <div class="w-1/6 lg:w-1/12">
+        <Image
+          class="w-full h-full object-contain rotation"
+          src={comb}
+          alt="Billedet viser en mørkebrun kam ..."
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- <section>
     <div class="flex flex-row justify-center my-20">
       <div class="">
         <Image
@@ -265,9 +303,9 @@ import camilla from "../assets/images/camilla.jpg";
         />
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Overskrift 2 -->
-  <div class="flex items-center mt-10 lg:pt-20 mb-6 lg:mx-20 lg:mb-24">
+  <div class="flex items-center lg:pt-10 mb-6 lg:mx-20 lg:mb-24">
     <div class="flex-grow border-t border-brun-900 lg:min-w-6"></div>
     <h1
       class="text-4xl text-center lg:text-6xl lg:text-left uppercase font-bold font-outfit px-[8px] lg:px-[30px]"
@@ -310,7 +348,11 @@ import camilla from "../assets/images/camilla.jpg";
           </div>
 
           <div class="flex justify-center mt-6">
-            <Button class="uppercase">Book tid</Button>
+            <Link
+              class="uppercase"
+              variant="db"
+              href="https://salonbook.one/?casa17#/">BOOK TID</Link
+            >
           </div>
         </div>
       </div>
@@ -407,7 +449,7 @@ import camilla from "../assets/images/camilla.jpg";
       </div>
     </section> -->
 
-  <section id="åbningstider" class="flex justify-center">
+  <section id="åbningstider" class="flex justify-center mx-20">
     <Aabningstider class="flex items-center" />
   </section>
 
@@ -512,7 +554,7 @@ import camilla from "../assets/images/camilla.jpg";
   </div>
 
   <section>
-    <div class="mx-20 mb-20">
+    <div class="mx-10 lg:mx-20 mb-20">
       <div class="flex items-center flex-col lg:flex-row gap-10">
         <HoverPic
           image="../img/brand_evo1.jpg"
