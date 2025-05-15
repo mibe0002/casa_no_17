@@ -5,6 +5,7 @@ import Button from '../components/Button.astro';
 import HoverPic from '../components/HoverPic.astro';
 import { Image } from 'astro:assets';
 import hairdryer from "../assets/images/hairdryer.svg";
+import Link2 from "../components/Link2.astro";
 ---
 <MainLayout title="Priser">
 	<section class="mx-10 lg:mx-20">
@@ -98,9 +99,9 @@ import hairdryer from "../assets/images/hairdryer.svg";
 							<Image class="rotation" src={hairdryer} alt="Animeret illustration af en føntørrer" loading="lazy"/>
 						</div>
 						<div class="flex justify-center mb-6 lg:order-1 lg:h-fit">
-							<Button variant="lb">
-								<a href="https://salonbook.one/?casa17#/" target="_blank">Book tid</a>
-							</Button>
+							<Link2 variant="lb" href="https://salonbook.one/?casa17#/">
+								Book tid
+							</Link2>
 						</div>
 					</div>
 					<p class="break-words text-sm">OBS Vores farvebehandlinger er fra priser, da der kan komme tillæg på ved ekstra langt/tykt hår. Derudover tages der forbehold for prisstigninger og tastefejl.</p>
@@ -111,7 +112,7 @@ import hairdryer from "../assets/images/hairdryer.svg";
 	<section class="mx-10 lg:mx-20">
 		<div class="flex items-center mt-10 lg:mt-20 mb-6 lg:mb-24">
 			<div class="flex-grow border-t border-brun-900 min-w-6"></div>
-			<h1 class="text-4xl lg:text-6xl uppercase font-bold font-outfit px-[8px] lg:px-[30px]">Brands</h1>
+			<h3 class="text-4xl lg:text-6xl uppercase font-bold font-outfit px-[8px] lg:px-[30px]">Brands</h1>
 			<div class="flex-grow border-t border-brun-900 min-w-6"></div>
 		</div>
 		<div>
@@ -175,5 +176,10 @@ import hairdryer from "../assets/images/hairdryer.svg";
 	.flip-vertical {
   		transform: scaleX(-1);
 	}	
+
+	p {
+    font-family: "agrandir";
+  }
   </style>
+
   
