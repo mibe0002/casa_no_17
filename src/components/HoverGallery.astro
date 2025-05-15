@@ -13,16 +13,16 @@ const {
 
 <div>
   <div x-data="{ open: false }" @click.away="open = false" class="relative">
-    <div class="relative group">
-      <div class="w-full h-auto">
-        <img
-          src={image}
-          alt={imagealt}
-          class="w-full h-full object-cover cursor-pointer"
-          loading="lazy"
-          @click="window.innerWidth < 768 ? open = !open : null"
-        />
-      </div>
+    <div class="relative group aspect-[3/4]">
+      <!-- Her er fixet -->
+      <img
+        src={image}
+        alt={imagealt}
+        class="w-full h-full object-cover cursor-pointer"
+        loading="lazy"
+        @click="window.innerWidth < 768 ? open = !open : null"
+      />
+
       <div
         x-show="open || window.innerWidth >= 768"
         x-transition
@@ -35,5 +35,6 @@ const {
     </div>
   </div>
 </div>
+
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
 ></script>
