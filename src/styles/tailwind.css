@@ -100,6 +100,20 @@
   .link-underline-bottom-2::after {
     bottom: -0.5rem; /* bottom-2 */
   }
+
+  .link-underline-active {
+    @apply relative;
+  }
+
+  .link-underline-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--link-underline-color, #443028); /* fallback color */
+    bottom: 0; /* eller brug bottom: -0.5rem; hvis du vil have afstand */
+  }
 }
 /* Animation fra: https://tailwindflex.com/@cagarcia2011/underline-hover-effect af Carlos Adrian Garcia */
 /*css use in html = link-underline-hover link-underline-800/25 link-underline-bottom-0/2 */
