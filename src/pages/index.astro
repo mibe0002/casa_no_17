@@ -17,19 +17,11 @@ import Evo from "../assets/images/evo.svg";
 	
 <section id="hero" class="relative w-full h-screen overflow-hidden">
   <!-- Video Background -->
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    class="absolute top-0 left-0 w-full h-full object-cover"
-  >
-    <source src="/video/hero_video.mp4" type="video/mp4" />
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover" title="Video med forskellige klip fra frisørsalonen">
+    <source src="/video/hero_video.mp4" type="video/mp4"/>
   </video>
-
   <!-- Overlay for contrast -->
   <div class="absolute inset-0 bg-brun-800/30 z-10"></div>
-
   <!-- Content -->
   <div class="relative z-20 flex items-center justify-center h-full text-center px-4 md:pt-24">
     <div class="text-white max-w-2xl">
@@ -50,14 +42,13 @@ import Evo from "../assets/images/evo.svg";
 
 <div id="banner" class="logo-banner">
     <div class="logo-track gap-[80px] md:gap-[100px] lg:gap-[300px]">
-      <a href="https://www.wella.com/professional/da-DK/home"><Image class="lg:hover:scale-110 duration-300" src={Wella} alt="Wella" loading="lazy"/></a>
-      <a href="https://iconproducts.dk/"><Image class="lg:hover:scale-110 duration-300" src={Icon} alt="ICON" loading="lazy"/></a>
-      <a href="https://evohairstore.com/"><Image class="lg:hover:scale-110 duration-300" src={Evo} alt="Evo" loading="lazy"/></a>
-
+      <a href="https://www.wella.com/professional/da-DK/home"><Image class="lg:hover:scale-110 duration-300" src={Wella} alt="Ikon af firmaet Wella, klik på billedet for at komme til hjemmesiden" loading="lazy"/></a>
+      <a href="https://iconproducts.dk/"><Image class="lg:hover:scale-110 duration-300" src={Icon} alt="Ikon af firmaet ICON, klik på billedet for at komme til hjemmesiden" loading="lazy"/></a>
+      <a href="https://evohairstore.com/"><Image class="lg:hover:scale-110 duration-300" src={Evo} alt="Ikon af firmaet Evo, klik på billedet for at komme til hjemmesiden" loading="lazy"/></a>
       <!-- Duplicate for seamless scrolling on mobile -->
-      <Image class="md:hidden" src={Wella} alt="Wella" loading="lazy"/>
-      <Image class="md:hidden" src={Icon} alt="ICON" loading="lazy"/>
-      <Image class="md:hidden" src={Evo} alt="Evo" loading="lazy"/>
+      <Image class="md:hidden" src={Wella} alt="Ikon af firmaet Wella, klik på billedet for at komme til hjemmesiden" loading="lazy"/>
+      <Image class="md:hidden" src={Icon} alt="Ikon af firmaet ICON, klik på billedet for at komme til hjemmesiden" loading="lazy"/>
+      <Image class="md:hidden" src={Evo} alt="Ikon af firmaet Evo, klik på billedet for at komme til hjemmesiden" loading="lazy"/>
     </div>
 </div>
 
@@ -93,51 +84,17 @@ import Evo from "../assets/images/evo.svg";
 	<Aabningstider class="flex items-center"></Aabningstider>
 </article>
 
-  <div id="services" class="flex justify-center background">
-    <div class="max-w-7xl xl:max-w-[1536px] px-6 pb-12 pt- md:py-12 ">
-      <div class="grid md:grid-cols-3 gap-16">
-
-    <ServiceCard
-					url="https://salonbook.one/?casa17#/"
-
-					cardimage="../images/service1.png"
-
-					cardimagealt="Klik for at bestille tid online"
-
-					titel="Book tid"
-					>
-
-			</ServiceCard>
-
-      <ServiceCard
-					url="/priser"
-
-					cardimage="../images/service2.png"
-
-					cardimagealt="Klik for at bestille tid online"
-
-					titel="Se vores priser"
-					>
-
-			</ServiceCard>
-
-      <ServiceCard
-					url="/om-os"
-
-					cardimage="../images/service3.png"
-
-					cardimagealt="Klik for at bestille tid online"
-
-					titel="Læs mere om os"
-					>
-
-			</ServiceCard>
-      </div>
+<div id="services" class="flex justify-center background">
+  <div class="max-w-7xl xl:max-w-[1536px] px-6 pb-12 pt- md:py-12 ">
+    <div class="grid md:grid-cols-3 gap-16">
+      <ServiceCard url="https://salonbook.one/?casa17#/" cardimage="../images/service1.png" cardimagealt="Klik for at bestille tid online" titel="Book tid"></ServiceCard>
+      <ServiceCard url="/priser" cardimage="../images/service2.png" cardimagealt="Klik for at se salonens priser på ydelser" titel="Se vores priser"></ServiceCard>
+      <ServiceCard url="/om-os" cardimage="../images/service3.png" cardimagealt="Klik for at læse mere om hvem vi er, samt andet information" titel="Læs mere om os"></ServiceCard>
     </div>
+  </div>
 </div>
 
 <section id="saksen" class="bg-brun-800">
-
   <div class="flex items-center px-10 lg:px-20">
     <div class="flex-grow border-t border-brun-25"></div>
       <span class="px-4 max-w-[110px] items-center">
@@ -145,62 +102,19 @@ import Evo from "../assets/images/evo.svg";
       </span>
     <div class="flex-grow border-t border-brun-25"></div>
   </div>
-
 </section>
 
 <section id="galleri" class="bg-brun-800">
   <div class="md:flex justify-center">
-<div class="grid grid-cols-2 md:grid-cols-3 mx-10 md:mx-20 gap-3.5 md:gap-16 py-12 max-w-[1536px]" >
-  <HoverPic
-					
-					image="../images/g1.png"
-
-					imagealt="Klik for at bestille tid online"
-
-					navn="Juniorklip 6-12 år"
-					>
-
-  </HoverPic>
-
-  <HoverPic
-					
-					image="../images/g2.png"
-
-					imagealt="Klik for at bestille tid online"
-
-					navn="Striber i top/reperation"
-					>
-
-  </HoverPic>
-
-  <HoverPic
-					
-					image="../images/g3.png"
-
-					imagealt="Klik for at bestille tid online"
-
-					navn="Dameklip m. vask/føn"
-					>
-
-  </HoverPic>
-
-
-  <div class="md:hidden">
-    <HoverPic
-					
-					image="../images/g4.png"
-
-					imagealt="Klik for at bestille tid online"
-
-					navn="Striber i top/reperation"
-
-          beskrivelse="Dameklip m. vask/føn"
-					>
-
-    </HoverPic>
+    <div class="grid grid-cols-2 md:grid-cols-3 mx-10 md:mx-20 gap-3.5 md:gap-16 py-12 max-w-[1536px]" >
+      <HoverPic image="../images/g1.png" imagealt="Et billede der viser hvordan et Juniorklip 6-12 år ser ud" navn="Juniorklip 6-12 år"></HoverPic>
+      <HoverPic image="../images/g2.png" imagealt="Et billede der viser hvordan striber i top/reperation ser ud" navn="Striber i top/reperation"></HoverPic>
+      <HoverPic image="../images/g3.png" imagealt="Et billede der viser hvordan et dameklip m. vask/føn ser ud" navn="Dameklip m. vask/føn"></HoverPic>
+      <div class="md:hidden">
+        <HoverPic image="../images/g4.png" imagealt="Et billede der viser hvordan striber i top/reperation samt dameklip m. vask/føn ser ud" navn="Striber i top/reperation" beskrivelse="Dameklip m. vask/føn"></HoverPic>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 
 <div class="flex justify-center pb-12">
   <Link class="uppercase" variant="db" href="/galleri">Se galleri</Link>
@@ -211,68 +125,12 @@ import Evo from "../assets/images/evo.svg";
   <div class="">
     <h3 class="uppercase font-bold text-4xl lg:text-6xl text-center px-14 md:px-0  pt-12 lg:pt-16">Hvad vores <wbr>kunder siger</h3>
   </div>
-
   <div class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] gap-8 GoogleCards pt-12 pb-4 lg:pt-16 lg:pb-20 lg:px-20">
-    <GoogleCard
-        url="https://dk.trustpilot.com/users/582341310000ff000a55a769"
-
-        cardimagealt="Et par der danser ballroom"
-
-        navn="Thomas Jeppson"
-
-        dato="For 10 dage siden"
-
-        review="Den bedste frisør på Nørrebro! Hyggelig og god! Kan sit kram! Og Camilla er sød og rar!"
-
-        >
-
-    </GoogleCard>
-
-          <GoogleCard
-        url="https://dk.trustpilot.com/users/667420749867ff814c47b4a8"
-
-        cardimagealt="Et par der danser ballroom"
-
-        navn="N. Kragh"
-
-        dato="For 2 måneder siden"
-
-        review="Altid super godt arbejde og dejlig behandling 👍"
-
-        >
-
-    </GoogleCard>
-
-          <GoogleCard
-        url="https://dk.trustpilot.com/users/66784e7475540f080c962edf"
-
-        cardimagealt="Et par der danser ballroom"
-
-        navn="Mette Risbo Jessen"
-
-        dato="For 8 måneder siden"
-
-        review="Altid god service"
-
-        >
-
-    </GoogleCard>
-
-          <GoogleCard
-        url="https://dk.trustpilot.com/users/66743f35aed1957bc1511913"
-
-        cardimagealt="Et par der danser ballroom"
-
-        navn="Benjamin Rud Elberth"
-
-        dato="For 1 år siden"
-
-        review="Camilla er jo bare fantastisk. Det koster noget. Men du får hvad du betaler for. En dejlig oplevelse."
-
-        >
-
-    </GoogleCard>
-    </div>
+    <GoogleCard url="https://dk.trustpilot.com/users/582341310000ff000a55a769" cardimagealt="Et review fra Thomas Jeppson omkring Casa No 17" navn="Thomas Jeppson" dato="For 10 dage siden" review="Den bedste frisør på Nørrebro! Hyggelig og god! Kan sit kram! Og Camilla er sød og rar!"></GoogleCard>
+    <GoogleCard url="https://dk.trustpilot.com/users/667420749867ff814c47b4a8" cardimagealt="Et review fra N. Kragh omkring Casa No 17" navn="N. Kragh" dato="For 2 måneder siden" review="Altid super godt arbejde og dejlig behandling 👍"></GoogleCard>
+    <GoogleCard url="https://dk.trustpilot.com/users/66784e7475540f080c962edf" cardimagealt="Et review fra Mette Risbo Jessen omkring Casa No 17" navn="Mette Risbo Jessen" dato="For 8 måneder siden" review="Altid god service"></GoogleCard>
+    <GoogleCard url="https://dk.trustpilot.com/users/66743f35aed1957bc1511913" cardimagealt="Et review fra Benjamin Rud Elberth omkring Casa No 17" navn="Benjamin Rud Elberth" dato="For 1 år siden" review="Camilla er jo bare fantastisk. Det koster noget. Men du får hvad du betaler for. En dejlig oplevelse."></GoogleCard>
+  </div>
 </section>
 
 <section class="pt-16 md:pt-0">
@@ -281,10 +139,9 @@ import Evo from "../assets/images/evo.svg";
 </MainLayout>
 
 <style>
-
-  .background {
-   background: linear-gradient(0deg, #443028 60%, #FAF9F8 40%);
-}
+.background {
+      background: linear-gradient(0deg, #443028 60%, #FAF9F8 40%);
+    }
 
 .logo-banner {
       height: 200px;
@@ -295,13 +152,13 @@ import Evo from "../assets/images/evo.svg";
       justify-content: center;
     }
 
-    .logo-track {
+.logo-track {
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .logo-track img {
+.logo-track img {
       height: 100px;
       max-width: 100%;
       object-fit: contain;
