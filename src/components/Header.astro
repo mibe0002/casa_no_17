@@ -3,27 +3,25 @@ import { Image } from 'astro:assets';
 import logo from '../assets/images/logo.svg';
 import Link from './Link.astro';
 import Link2 from './Link2.astro';
-
-const currentPath = Astro.url.pathname
 ---
 <div class="w-full h-auto">
     <div class="flex justify-between items-center px-10 lg:px-20 py-6 lg:py-4 border-b border-brun-800 bg-brun-25">
         <div class="hidden lg:flex items-center justify-between w-screen">
             <nav>
                 <ul class="flex gap-16">
-                    <li><Link href="/priser" variant="large" size="header" isActive={currentPath === '/priser'}>Priser</Link></li>
-                    <li><Link href="/om-os" variant="large" size="header" isActive={currentPath === '/om-os'}>Om os</Link></li>
-                    <li><Link href="/galleri" variant="large" size="header" isActive={currentPath === '/galleri'}>Galleri</Link></li>
+                    <li><Link href="/priser" variant="large" size="header">Priser</Link></li>
+                    <li><Link href="/om-os" variant="large" size="header">Om os</Link></li>
+                    <li><Link href="/galleri" variant="large" size="header">Galleri</Link></li>
                 </ul>
             </nav>
 
             <Link href="/" class="transition-transform duration-200 active:scale-105 hover:scale-105">
-                <Image src={logo} alt="" loading="eager"></Image>
+                <Image src={logo} alt="Casa No 17's Logo" loading="eager"></Image>
                 <span class="sr-only hidden">Gå til Casa No 17s forside</span>
             </Link>
 
             <div class="flex gap-16 items-baseline">
-                <Link href="/#åbningstider" variant="large" size="header" isActive={currentPath === '/#åbningstider'}>Åbningstider</Link>
+                <Link href="/#åbningstider" variant="large" size="header">Åbningstider</Link>
                 <Link2 variant="lb" href="https://salonbook.one/?casa17#/">
                     Book tid
                 </Link2>
@@ -49,10 +47,10 @@ const currentPath = Astro.url.pathname
     <nav id="mobileMenu" class="lg:hidden hidden transition-all duration-300 pt-8 pb-10 bg-brun-800 px-10 py-6">
         <div class="flex flex-col gap-10">
             <ul class="uppercase font-outfit flex flex-col gap-8">
-                <li><Link href="/priser" isActive={currentPath === '/priser'}>Priser</Link></li>
-                <li><Link href="/om-os" isActive={currentPath === '/om-os'}>Om os</Link></li>
-                <li><Link href="/galleri" isActive={currentPath === '/galleri'}>Galleri</Link></li>
-                <li><Link href="/#åbningstider" isActive={currentPath === '/#åbningstider'}>Åbningstider</Link></li>
+                <li><Link href="/priser">Priser</Link></li>
+                <li><Link href="/om-os">Om os</Link></li>
+                <li><Link href="/galleri">Galleri</Link></li>
+                <li><Link href="/#åbningstider">Åbningstider</Link></li>
             </ul>
             <Link2 variant="db" href="https://salonbook.one/?casa17#/" class="text-center">
                 Book tid
