@@ -2,11 +2,18 @@
 // Henter parametrene fra Astro.props
 const { href="", target="_self", variant="small", size="header", ...rest} = Astro.props;
 
+const currentPath = Astro.url.pathname;
+
+// Match siden med nav link
+const isActive = href !== "/" && href === currentPath;
+
+
 //Alle Links
 const linkStyling = "transition-colors duration-500 no-underline font-outfit text-brun-25"; 
 
 // Hvis aktiv, tilføj ekstra styling
-const activeClass = "link-underline-active link-underline-800";
+// const activeClass = "border-b-[3px] border-brun-800 pb-2";
+const activeClass = "link-underline-active";
 
 //Forskellige knapper (farver o.lign.)
 const variantClasses = {
@@ -24,6 +31,6 @@ const sizeClasses = {
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
 <a href={href} target={target} class:list={[linkStyling, variantClasses[variant],
-sizeClasses[size], rest.class]} {...rest}>
+sizeClasses[size], isActive && activeClass, rest.class]} {...rest}>
 <slot />
 </a>

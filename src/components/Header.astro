@@ -9,9 +9,9 @@ import Link2 from './Link2.astro';
         <div class="hidden lg:flex items-center justify-between w-screen">
             <nav>
                 <ul class="flex gap-16">
-                    <li><Link href="/priser" variant="large" size="header" data-page="priser">Priser</Link></li>
-                    <li><Link href="/om-os" variant="large" size="header" data-page="om-os">Om os</Link></li>
-                    <li><Link href="/galleri" variant="large" size="header" data-page="galleri">Galleri</Link></li>
+                    <li><Link href="/priser" variant="large" size="header">Priser</Link></li>
+                    <li><Link href="/om-os" variant="large" size="header">Om os</Link></li>
+                    <li><Link href="/galleri" variant="large" size="header">Galleri</Link></li>
                 </ul>
             </nav>
 
@@ -21,7 +21,7 @@ import Link2 from './Link2.astro';
             </Link>
 
             <div class="flex gap-16 items-baseline">
-                <Link href="/#åbningstider" variant="large" size="header">Åbningstider</Link>
+                <Link href="/#åbningstider" variant="large" size="header" class="section-link">Åbningstider</Link>
                 <Link2 variant="lb" href="https://salonbook.one/?casa17#/">
                     Book tid
                 </Link2>
@@ -59,36 +59,85 @@ import Link2 from './Link2.astro';
     </nav>
 </div>
 
+<!-- Hashtag sektion underline -->
+<style>
+.section-link {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section-link::after {
+    content: '';
+  position: absolute;
+  bottom: 0;             
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background-color: var(--link-underline-color, currentColor);
+  transition-property: width, left;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.section-link.active::after {
+    left: 0;
+    width: 100%;
+}
+
+.section-link:hover::after {
+  left: 0;
+  width: 100%;
+}
+</style>
+
 <script>
-    // JavaScript
+   // JavaScript
 const burgerButton = document.getElementById('burgerButton');
 const mobileMenu = document.getElementById('mobileMenu');
 const burgerLines = document.getElementById('burgerLines');
 const closeLines = document.getElementById('closeLines');
 
 burgerButton.addEventListener('click', () => {
-    const isOpen = !mobileMenu.classList.contains('hidden');
-
-burgerButton.addEventListener('click', () => 
-  mobileMenu.classList.toggle('hidden'));
+  mobileMenu.classList.toggle('hidden');
 
   // Skift ikon
   burgerLines.classList.toggle('hidden');
   closeLines.classList.toggle('hidden');
-
-  // Update ARIA attributes
-  burgerButton.setAttribute('aria-expanded', String(!isOpen));
-    burgerButton.setAttribute('aria-label', isOpen ? 'Åbn menu' : 'Luk menu');
 });
 
-const path = window.location.pathname.split("/").pop();
-const currentPage = path.includes(".html") ? path : path + ".html";
+// Hashtag vis underline ved active
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll<HTMLAnchorElement>('.section-link');
 
-document.querySelectorAll(".nav-link").forEach(link => {
-  if (link instanceof HTMLElement) {
-    if (link.dataset.page === currentPage) {
-      link.classList.add("border-b-2", "border-pink-500");
+    function activateLinkByHash() {
+      const hash = window.location.hash;
+      if (!hash) {
+        links.forEach(link => link.classList.remove('active'));
+        return;
+      }
+
+      links.forEach(link => {
+        const linkHash = new URL(link.href).hash;
+        if (linkHash === hash) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
     }
-  }
-});
+
+    activateLinkByHash();
+
+    window.addEventListener('hashchange', activateLinkByHash);
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  });
 </script>
+
+  
