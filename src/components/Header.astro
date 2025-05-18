@@ -106,38 +106,80 @@ burgerButton.addEventListener('click', () => {
   closeLines.classList.toggle('hidden');
 });
 
-// Hashtag vis underline ved active
+// Underline feedback generelt
 document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll<HTMLAnchorElement>('.section-link');
+  const links = document.querySelectorAll<HTMLAnchorElement>('.section-link');
 
-    function activateLinkByHash() {
-      const hash = window.location.hash;
-      if (!hash) {
-        links.forEach(link => link.classList.remove('active'));
-        return;
-      }
-
-      links.forEach(link => {
-        const linkHash = new URL(link.href).hash;
-        if (linkHash === hash) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
-    }
-
-    activateLinkByHash();
-
-    window.addEventListener('hashchange', activateLinkByHash);
+  function activateLink() {
+    const hash = window.location.hash;
+    const currentPath = window.location.pathname.replace(/\/$/, '');
 
     links.forEach(link => {
-      link.addEventListener('click', () => {
-        links.forEach(l => l.classList.remove('active'));
+      const url = new URL(link.href);
+      const linkHash = url.hash;
+      const linkPath = url.pathname.replace(/\/$/, '');
+
+      // Prioritér hash-match, hvis der er et hash i URL
+      if (hash && linkHash === hash) {
         link.classList.add('active');
-      });
+      } else if (!hash && linkPath === currentPath && currentPath !== '') {
+        // Hvis ingen hash, så match på path
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  activateLink();
+
+  window.addEventListener('hashchange', activateLink);
+  window.addEventListener('popstate', activateLink); // håndter browser back/forward navigation
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      // Opdater aktivt link ved klik
+      links.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
     });
   });
+});
 </script>
 
   
+
+
+
+
+<!-- Backup -->
+<!-- document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll<HTMLAnchorElement>('.section-link');
+
+  function activateLinkByHash() {
+    const hash = window.location.hash;
+    if (!hash) {
+      links.forEach(link => link.classList.remove('active'));
+      return;
+    }
+
+    links.forEach(link => {
+      const linkHash = new URL(link.href).hash;
+      if (linkHash === hash) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  activateLinkByHash();
+
+  window.addEventListener('hashchange', activateLinkByHash);
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      links.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+}); -->
