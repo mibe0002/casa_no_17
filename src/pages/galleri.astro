@@ -1,7 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import instagram from "../assets/images/ig.svg";
 import facebook from "../assets/images/fb.svg";
@@ -54,96 +52,6 @@ import HoverGallery from "../components/HoverGallery.astro";
     </div>
   </section>
 
-  <!-- 
-  <section class="flex mx-10 mb-10 lg:mx-20">
-    <div class="flex items-center gap-4">
-      <a
-        href="https://www.instagram.com/casa_no_17/"
-        target="_blank"
-        class="transition-transform duration-200 active:scale-105 hover:scale-105"
-      >
-        <Image
-          src={instagram}
-          alt="Instagram ikon"
-          loading="lazy"
-          class="w-12 h-12"
-        />
-      </a>
-
-      <a
-        href="https://www.facebook.com/groups/164095825399/"
-        target="_blank"
-        class="transition-transform duration-200 active:scale-105 hover:scale-105"
-      >
-        <Image
-          src={facebook}
-          alt="Facebook ikon"
-          loading="lazy"
-          class="w-12 h-12"
-        />
-      </a>
-    </div>
-    <div>
-      <p class="max-w-prose leading-relaxed">
-        Få et glimt af hverdagen i salonen, bliv inspireret af smukke hårstile
-        og vær den første til at få nyheder, tips og eksklusive tilbud.
-      </p>
-    </div>
-  </section> -->
-
-  <!-- <section
-    class="grid grid-rows-2 lg:grid-cols-[1fr_8fr] lg:gap-0 mx-10 lg:mx-20"
-  >
-    <div class="flex gap-4">
-      <a
-        href="https://www.instagram.com/casa_no_17/"
-        target="_blank"
-        class="transition-transform duration-200 active:scale-105 hover:scale-105"
-      >
-        <Image src={instagram} alt="Instagram ikon" loading="lazy" />
-      </a>
-
-      <a
-        href="https://www.facebook.com/groups/164095825399/"
-        target="_blank"
-        class="transition-transform duration-200 active:scale-105 hover:scale-105"
-      >
-        <Image src={facebook} alt="Facebook ikon" loading="lazy" />
-      </a>
-    </div>
-    <div>
-      <p class="max-w-prose leading-relaxed">
-        Få et glimt af hverdagen i salonen, bliv inspireret af smukke hårstile
-        og vær den første til at få nyheder, tips og eksklusive tilbud.
-      </p>
-    </div>
-  </section> -->
-
-  <!-- <section class="flex gap-4 pt-5 mx-10 mb-10 lg:mx-20">
-    <div class="flex min-w-[200px]">
-      <a
-        href="https://www.instagram.com/casa_no_17/"
-        target="_blank"
-        class="transition-transform duration-200 active:scale-105 hover:scale-105"
-      >
-        <Image src={instagram} alt="Instagram ikon" loading="lazy" />
-      </a>
-
-      <a
-        href="https://www.facebook.com/groups/164095825399/"
-        target="_blank"
-        class="transition-transform duration-200 active:scale-105 hover:scale-105"
-      >
-        <Image src={facebook} alt="Facebook ikon" loading="lazy" />
-      </a>
-    </div>
-    <div>
-      <p class="max-w-prose leading-relaxed">
-        Få et glimt af hverdagen i salonen, bliv inspireret af smukke hårstile
-        og vær den første til at få nyheder, tips og eksklusive tilbud.
-      </p>
-    </div>
-  </section> -->
   <section class="grid grid-cols-2 mx-10 mb-20 gap-5 lg:grid-cols-3 lg:mx-20">
     <HoverGallery
       image="../img/billede_1.jpg"

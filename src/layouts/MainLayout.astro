@@ -5,21 +5,22 @@ import '../styles/tailwind.css';
 import 'animate.css';
 const { title } = Astro.props;
 ---
-<html lang="da" class="scroll-smooth scrollbar-custom">
+<html lang="da" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<meta name="robots" content="noindex, nofollow">
 		<meta name="description" content="Book tid hos Casa No 17 - frisørsalonen hvor dit hår er i fokus, og du får en skræddersyet oplevelse hver gang.">
 		<title>{Astro.props.title}</title>
 
-		<!-- Fonts -->
+		<!-- Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 	</head>
+	
 	<body>
 
 		<header class="top-0 z-[100] sticky">

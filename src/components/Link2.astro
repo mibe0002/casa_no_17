@@ -1,14 +1,14 @@
 ---
 // Henter parametrene fra Astro.props
-const {href= "", target ="_blank", variant = "lb", size = "size", ...rest} = Astro.props;
+const {href= "", target ="", variant = "lb", size = "size", ...rest} = Astro.props;
 
 //Alle knapper
 const linkStyling = "rounded-[1.875rem] font-outfit font-bold uppercase";
 
 //Forskellige knapper (farver o.lign.)
 const variantClasses = {
-  db: "border border-2 border-brun-25 text-brun-25 hover:bg-brun-25 hover:text-brun-800 hover:duration-300",
-  lb: "border border-2 border-brun-800 text-brun-800 hover:bg-brun-800 hover:text-brun-25 hover:duration-300",
+  db: "border border-2 border-brun-25 text-brun-25 hover:bg-brun-25 hover:text-brun-800 hover:duration-300 focus:outline-none focus:ring-2 focus:ring-brun-25",
+  lb: "border border-2 border-brun-800 text-brun-800 hover:bg-brun-800 hover:text-brun-25 hover:duration-300 focus:outline-none focus:ring-2 focus:ring-brun-800",
 };
 
 //Forskellige størrelser

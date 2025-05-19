@@ -22,21 +22,9 @@
   --color-brun-700: #64473a;
   --color-brun-800: #443028;
   --color-brun-900: #201713;
-
-  /* BorderRadius */
-  /* --rounded-button: 1.875rem;
-  --rounded-card: 0.313rem; */
 }
 
 @layer base {
-  /* *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  } */
-
   /* fonts */
   @font-face {
     font-family: "agrandir";
@@ -58,10 +46,6 @@
   h4 {
     font-family: "outfit";
   }
-  /* 
-  p {
-    font-family: "agrandir";
-  } */
 }
 
 @layer components {

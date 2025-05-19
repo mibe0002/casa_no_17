@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Pris from "../components/Pris.astro";
-import Button from "../components/Button.astro";
 import HoverPic from "../components/HoverPic.astro";
 import { Image } from "astro:assets";
 import hairdryer from "../assets/images/hairdryer.svg";
@@ -19,6 +18,8 @@ import Link2 from "../components/Link2.astro";
       </h1>
       <div class="flex-grow border-t border-brun-900 min-w-6"></div>
     </div>
+
+    <!-- Priserne -->
     <div class="lg:grid lg:grid-cols-2 lg:gap-36">
       <div class="lg:flex lg:flex-col lg:gap-10 lg:items-stretch">
         <div class="mb-12 lg:mb-0 order-1">
@@ -43,6 +44,7 @@ import Link2 from "../components/Link2.astro";
           />
           <Pris service="Striber hele håret inkl. klip" pris="Fra 2.130 kr." />
         </div>
+
         <!-- mobil rækkefølge -->
         <div class="mb-12 lg:mb-0 lg:hidden">
           <h2 class="text-2xl font-outfit uppercase font-bold pb-7">
@@ -115,7 +117,7 @@ import Link2 from "../components/Link2.astro";
               </Link2>
             </div>
           </div>
-          <p class="break-words text-sm">
+          <p class="break-words text-sm lg:text-base max-w-prose">
             OBS Vores farvebehandlinger er fra priser, da der kan komme tillæg
             på ved ekstra langt/tykt hår. Derudover tages der forbehold for
             prisstigninger og tastefejl.
@@ -124,6 +126,7 @@ import Link2 from "../components/Link2.astro";
       </div>
     </div>
   </section>
+
   <section class="mx-10 lg:mx-20">
     <div class="flex items-center mt-10 lg:mt-20 mb-6 lg:mb-24">
       <div class="flex-grow border-t border-brun-900 min-w-6"></div>
@@ -134,8 +137,9 @@ import Link2 from "../components/Link2.astro";
       </h3>
       <div class="flex-grow border-t border-brun-900 min-w-6"></div>
     </div>
+    
     <div>
-      <div class="mx-10 lg:mx-20 mb-20">
+      <div class="mb-10 lg:mb-20">
         <div class="flex items-center flex-col lg:flex-row gap-10">
           <HoverPic
             image="../img/brand_evo1.jpg"
@@ -161,7 +165,7 @@ import Link2 from "../components/Link2.astro";
         </div>
         <div class="mt-2">
           <p>
-            <span class="font-bold uppercase text-brun-900 leading-relaxed">
+            <span class="font-bold uppercase text-brun-900 leading-relaxed text-sm lg:text-base">
               Obs
             </span>
             Viste produkter kan kun købes i salonen, og ikke online
