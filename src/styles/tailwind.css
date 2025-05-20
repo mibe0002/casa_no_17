@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"); */
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
@@ -7,7 +7,7 @@
 @theme {
   /* Her tilføjes theme variable // tokens */
   /* Font */
-  --font-outfit: "outfit", sans-serif;
+  /* --font-outfit: "outfit", sans-serif; */
 
   /* Colors */
   --color-brun-0: #ffffff;
@@ -32,19 +32,19 @@
     src: url("../font/agrandir.woff2") format("woff2");
   }
 
+  @font-face {
+    font-family: "outfit";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../font/outfit.woff2") format("woff2");
+  }
+
   body {
     background-color: var(--color-brun-25);
   }
 
   footer {
     background-color: var(--color-brun-800);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: "outfit";
   }
 }
 
