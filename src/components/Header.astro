@@ -9,9 +9,9 @@ import Link2 from './Link2.astro';
         <!-- Nav links desktop -->
         <div class="hidden lg:flex items-center justify-between w-screen">
             <nav>
-                <ul class="flex gap-16">
+                <ul class="flex gap-12">
                     <li><Link href="/priser" variant="large" size="header" class="section-link">Priser</Link></li>
-                    <li><Link href="/om-os" variant="large" size="header" class="section-link">Om os</Link></li>
+                    <li><Link href="/#åbningstider" variant="large" size="header" class="section-link">Åbningstider</Link></li>
                     <li><Link href="/galleri" variant="large" size="header" class="section-link">Galleri</Link></li>
                 </ul>
             </nav>
@@ -23,8 +23,9 @@ import Link2 from './Link2.astro';
             </Link>
 
             <!-- Button CTA & åbningstider -->
-            <div class="flex gap-16 items-baseline">
-                <Link href="/#åbningstider" variant="large" size="header" class="section-link">Åbningstider</Link>
+            <div class="flex gap-12 items-baseline">
+                <Link href="/om-os" variant="large" size="header" class="section-link">Om os</Link>
+                <Link href="/kontakt" variant="large" size="header" class="section-link">Kontakt</Link>
                 <Link2 variant="lb" href="https://salonbook.one/?casa17#/" target="_blank">
                     Book tid
                 </Link2>
@@ -53,9 +54,10 @@ import Link2 from './Link2.astro';
         <div class="flex flex-col gap-10">
             <ul class="uppercase font-outfit flex flex-col gap-8">
                 <li><Link href="/priser">Priser</Link></li>
-                <li><Link href="/om-os">Om os</Link></li>
-                <li><Link href="/galleri">Galleri</Link></li>
                 <li><Link href="/#åbningstider">Åbningstider</Link></li>
+                <li><Link href="/galleri">Galleri</Link></li>
+                <li><Link href="/om-os">Om os</Link></li>
+                <li><Link href="/kontakt">Kontakt</Link></li>
             </ul>
             <Link2 variant="db" href="https://salonbook.one/?casa17#/" class="text-center" target="_blank">
                 Book tid
