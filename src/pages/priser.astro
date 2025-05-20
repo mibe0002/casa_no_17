@@ -10,32 +10,38 @@ import Link2 from "../components/Link2.astro";
 <MainLayout title="Priser">
   <section class="mx-10 lg:mx-20">
     <div class="flex items-center mt-10 lg:mt-20 mb-6 lg:mb-24">
+      <!-- Border Grafik -->
       <div class="flex-grow border-t border-brun-900 min-w-6"></div>
       <h1
-        class="text-4xl lg:text-6xl uppercase font-bold font-outfit px-[8px] lg:px-[30px]"
-      >
+        class="text-4xl lg:text-6xl uppercase font-bold font-outfit px-[16px]">
         Priser
       </h1>
+      <!-- Border Grafik -->
       <div class="flex-grow border-t border-brun-900 min-w-6"></div>
     </div>
 
     <!-- Priserne -->
     <div class="lg:grid lg:grid-cols-2 lg:gap-36">
       <div class="lg:flex lg:flex-col lg:gap-10 lg:items-stretch">
-        <div class="mb-12 lg:mb-0 order-1">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">Klip</h2>
+        <!-- Klip -->
+        <div class="mb-16 lg:mb-0 order-1">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">Klip</h2>
           <Pris service="Dameklip m. vask/føn" pris="730 kr." />
           <Pris service="Herreklip m. vask/føn" pris="630 kr." />
           <Pris service="Juniorklip 6-12 år" pris="490 kr." />
           <Pris service="Børneklip 0-5 år" pris="390 kr." />
         </div>
-        <div class="mb-12 lg:mb-0">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">Striber</h2>
+
+        <!-- Striber -->
+        <div class="mb-16 lg:mb-0">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">Striber</h2>
           <Pris service="Striber i top/reperation" pris="Fra 800 kr." />
           <Pris service="Striber i hele håret" pris="Fra 1.400 kr." />
         </div>
-        <div class="mb-12 lg:mb-0">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">
+
+        <!-- Striber med klip -->
+        <div class="mb-16 lg:mb-0">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">
             STRIBER MED KLIP
           </h2>
           <Pris
@@ -46,15 +52,18 @@ import Link2 from "../components/Link2.astro";
         </div>
 
         <!-- mobil rækkefølge -->
-        <div class="mb-12 lg:mb-0 lg:hidden">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">
+         <!-- Helfarve mobil -->
+        <div class="mb-16 lg:mb-0 lg:hidden">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">
             HELFARVE
           </h2>
           <Pris service="Helfarve i bund" pris="Fra 750 kr." />
           <Pris service="Helfarve ud i længder" pris="Fra 900 kr" />
         </div>
-        <div class="mb-12 lg:mb-0 lg:hidden">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">
+
+        <!-- Helfarve med klip mobil -->
+        <div class="mb-16 lg:mb-0 lg:hidden">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">
             HELFARVE MED KLIP
           </h2>
           <Pris service="Helfarve i bund inkl. klip" pris="Fra 1.480 kr." />
@@ -63,8 +72,10 @@ import Link2 from "../components/Link2.astro";
             pris="Fra 1.630 kr."
           />
         </div>
-        <div class="mb-12 lg:mb-0">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">
+
+        <!-- Bryn & vipper -->
+        <div class="mb-16 lg:mb-0">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">
             BRYN & VIPPER
           </h2>
           <Pris service="Bryn og vipper" pris="320 kr." />
@@ -72,16 +83,20 @@ import Link2 from "../components/Link2.astro";
           <Pris service="Vipper" pris="190 kr." />
         </div>
       </div>
+
+      <!-- Helfarve desktop -->
       <div class="lg:flex lg:flex-col lg:gap-10 lg:items-stretch">
-        <div class="mb-12 lg:mb-0 hidden lg:block">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">
+        <div class="mb-16 lg:mb-0 hidden lg:block">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">
             HELFARVE
           </h2>
           <Pris service="Helfarve i bund" pris="Fra 750 kr." />
           <Pris service="Helfarve ud i længder" pris="Fra 900 kr" />
         </div>
-        <div class="mb-12 lg:mb-0 hidden lg:block">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">
+
+        <!-- Helfarve med klip desktop -->
+        <div class="mb-16 lg:mb-0 hidden lg:block">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">
             HELFARVE MED KLIP
           </h2>
           <Pris service="Helfarve i bund inkl. klip" pris="Fra 1.480 kr." />
@@ -90,18 +105,25 @@ import Link2 from "../components/Link2.astro";
             pris="Fra 1.630 kr."
           />
         </div>
-        <div class="mb-12 lg:mb-0">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">HÅRKUR</h2>
+
+        <!-- Hårkur -->
+        <div class="mb-16 lg:mb-0">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">HÅRKUR</h2>
           <Pris service="Hårkur" pris="Fra 250 kr." />
         </div>
-        <div class="mb-12 lg:mb-0">
-          <h2 class="text-2xl font-outfit uppercase font-bold pb-7">
+
+        
+        <!-- Opsætning & føn -->
+        <div class="mb-16 lg:mb-0">
+          <h2 class="text-2xl font-outfit uppercase font-bold pb-6">
             OPSÆTNING & FØN
           </h2>
           <Pris service="Vask og føn" pris="450 kr." />
           <Pris service="Håropsætninger" pris="Kontakt salonen" />
         </div>
-        <div class="mb-12 lg:mb-6">
+
+        <!-- Grafik, knap og tekst -->
+        <div class="mb-16 lg:mb-6">
           <div class="lg:flex lg:items-center lg:justify-between">
             <div class="flex justify-center flip-vertical mb-6 lg:order-2">
               <Image
@@ -131,8 +153,7 @@ import Link2 from "../components/Link2.astro";
     <div class="flex items-center mt-10 lg:mt-20 mb-6 lg:mb-24">
       <div class="flex-grow border-t border-brun-900 min-w-6"></div>
       <h3
-        class="text-4xl lg:text-6xl uppercase font-bold font-outfit px-[8px] lg:px-[30px]"
-      >
+        class="text-4xl lg:text-6xl uppercase font-bold font-outfit px-[8px] lg:px-[30px]">
         Brands
       </h3>
       <div class="flex-grow border-t border-brun-900 min-w-6"></div>
@@ -140,7 +161,7 @@ import Link2 from "../components/Link2.astro";
     
     <div>
       <div class="mb-10 lg:mb-20">
-        <div class="flex items-center flex-col lg:flex-row gap-10">
+        <div class="flex items-center flex-col lg:flex-row gap-6 lg:gap-14">
           <HoverPic
             image="../img/brand_evo1.jpg"
             imagealt="Billede der viser tre forskellige produkter fra EVO. "
@@ -163,7 +184,7 @@ import Link2 from "../components/Link2.astro";
             beskrivelse="Style dit hår med disse produkter"
           />
         </div>
-        <div class="mt-2">
+        <div class="mt-4">
           <p>
             <span class="font-bold uppercase text-brun-900 leading-relaxed text-sm lg:text-base">
               Obs

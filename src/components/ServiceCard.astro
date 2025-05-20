@@ -1,9 +1,9 @@
 ---
-const { url="#", cardimage="", cardimagealt="", titel="" } = Astro.props;
+const { url="#", cardimage="", cardimagealt="", titel="", target="" } = Astro.props;
 ---
 
-<a href={url}>
-<div class="bg-brun-25 text-brun-25 rounded-lg overflow-hidden relative group lg:hover:scale-110 duration-300">
+<a href={url} target={target}>
+<div class="bg-brun-25 text-brun-25 rounded-[30px] overflow-hidden relative group lg:hover:scale-110 duration-300">
     <div class="w-full h-full object-cover">
              <img src={cardimage} alt={cardimagealt} loading="lazy">
         </div>
