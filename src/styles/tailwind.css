@@ -1,4 +1,19 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"); */
+
+@font-face {
+  font-family: "agrandir";
+  src: url("/font/agrandir.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "outfit";
+  src: url("/font/outfit.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
@@ -37,13 +52,13 @@
 
 @layer utilities {
   /* font */
-  .font-agrandir {
+  /* .font-agrandir {
     font-family: "agrandir", sans-serif;
   }
 
   .font-outfit {
     font-family: "outfit", sans-serif;
-  }
+  } */
 
   /* underline hover effect */
   .link-underline-hover::after {
