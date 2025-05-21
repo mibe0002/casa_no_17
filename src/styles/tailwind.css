@@ -6,8 +6,6 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
-  /* Font */
-  /* --font-outfit: "outfit", sans-serif; */
 
   /* Colors */
   --color-brun-0: #ffffff;
@@ -25,20 +23,6 @@
 }
 
 @layer base {
-  /* fonts */
-  @font-face {
-    font-family: "agrandir";
-    font-style: normal;
-    src: url("../font/agrandir.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-family: "outfit";
-    font-style: normal;
-    font-weight: 700;
-    src: url("../font/outfit.woff2") format("woff2");
-  }
-
   body {
     background-color: var(--color-brun-25);
   }
@@ -52,6 +36,15 @@
 }
 
 @layer utilities {
+  /* font */
+  .font-agrandir {
+    font-family: "agrandir", sans-serif;
+  }
+
+  .font-outfit {
+    font-family: "outfit", sans-serif;
+  }
+
   /* underline hover effect */
   .link-underline-hover::after {
     content: "";

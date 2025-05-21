@@ -1,4 +1,5 @@
 ---
+import Link from "../components/Link.astro";
 const { url="#", cardimage="", cardimagealt="", titel="", target="" } = Astro.props;
 ---
 
@@ -10,7 +11,7 @@ const { url="#", cardimage="", cardimagealt="", titel="", target="" } = Astro.pr
         <div class="absolute bottom-0 w-full bg-gradient-to-t from-brun-900 to-transparent p-6">
             <p class="text-2xl uppercase font-outfit font-bold">{titel}</p>
           <hr class="border-brun-25 my-2" />
-          <p class="text-base hover:opacity-80">Læs mere &gt;</a>
+          <p class="text-base hover:opacity-80 hover:underline font-agrandir">Læs mere</a>
     </div>
 </div>
 </a>

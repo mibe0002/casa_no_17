@@ -22,9 +22,9 @@ import Link2 from "../components/Link2.astro";
 
     <!-- Priserne -->
     <div class="lg:grid lg:grid-cols-2 lg:gap-36">
-      <div class="lg:flex lg:flex-col lg:gap-10 lg:items-stretch">
+      <div class="lg:flex lg:flex-col lg:gap-20 lg:items-stretch">
         <!-- Klip -->
-        <div class="mb-16 lg:mb-0 order-1">
+        <div class="mb-16 lg:mb-0">
           <h2 class="text-2xl font-outfit uppercase font-bold pb-6">Klip</h2>
           <Pris service="Dameklip m. vask/føn" pris="730 kr." />
           <Pris service="Herreklip m. vask/føn" pris="630 kr." />
@@ -85,7 +85,7 @@ import Link2 from "../components/Link2.astro";
       </div>
 
       <!-- Helfarve desktop -->
-      <div class="lg:flex lg:flex-col lg:gap-10 lg:items-stretch">
+      <div class="lg:flex lg:flex-col lg:gap-20 lg:items-stretch">
         <div class="mb-16 lg:mb-0 hidden lg:block">
           <h2 class="text-2xl font-outfit uppercase font-bold pb-6">
             HELFARVE
@@ -139,8 +139,11 @@ import Link2 from "../components/Link2.astro";
               </Link2>
             </div>
           </div>
-          <p class="break-words text-sm lg:text-base max-w-prose">
-            OBS Vores farvebehandlinger er fra priser, da der kan komme tillæg
+          <p class="break-words text-sm lg:text-base max-w-prose font-agrandir">
+            <span class="font-bold uppercase text-brun-900 leading-relaxed text-sm lg:text-base">
+              Obs
+            </span>
+            Vores farvebehandlinger er fra priser, da der kan komme tillæg
             på ved ekstra langt/tykt hår. Derudover tages der forbehold for
             prisstigninger og tastefejl.
           </p>
@@ -184,12 +187,12 @@ import Link2 from "../components/Link2.astro";
             beskrivelse="Style dit hår med disse produkter"
           />
         </div>
-        <div class="mt-4">
-          <p>
+        <div class="mt-4 lg:mt-7">
+          <p class="font-agrandir">
             <span class="font-bold uppercase text-brun-900 leading-relaxed text-sm lg:text-base">
               Obs
             </span>
-            Viste produkter kan kun købes i salonen, og ikke online
+            Viste produkter kan kun købes i salonen, og ikke online.
           </p>
         </div>
       </div>
