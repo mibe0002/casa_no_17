@@ -28,10 +28,10 @@ export default {
       //   },
       // },
       /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-      fontFamily: {
-        outfit: ["outfit", "sans-serif"],
-        agrandir: ["agrandir", "sans-serif"],
-      },
+      // fontFamily: {
+      //   outfit: ["outfit", "sans-serif"],
+      //   agrandir: ["agrandir", "sans-serif"],
+      // },
       /* Borders - borderstørrelser herunder */
       // borderWidth: {
       //   default: "0",

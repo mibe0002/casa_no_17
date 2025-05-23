@@ -28,7 +28,7 @@ const {
         x-transition
         class="rounded-b-[5px] absolute bottom-0 left-0 w-full bg-brun-700/80 text-brun-25 p-4 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:pointer-events-none"
       >
-        <p class="font-bold">{titel}</p>
+        <p id="outfit">{titel}</p>
         <p>{navn}</p>
         <p>{beskrivelse}</p>
       </div>
@@ -36,12 +36,16 @@ const {
   </div>
 </div>
 
-<!-- Henter Alpine.js, som gør det muligt at bruge x-data, x-show, @click, osv. -->
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-></script>
-
-
 <style>
+  p {
+    font-family: agrandir;
+  }
+
+  #outfit {
+    font-family: outfit;
+    font-weight: 700;
+  }
+  
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -60,3 +64,7 @@ const {
   }
 }
 </style>
+
+<!-- Henter Alpine.js, som gør det muligt at bruge x-data, x-show, @click, osv. -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+></script>

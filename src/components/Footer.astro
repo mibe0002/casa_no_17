@@ -20,28 +20,28 @@ import facebook from '../assets/images/facebook.svg';
 <!-- resten af footeren -->
 <div class="px-10 lg:px-20 py-8 lg:py-10 grid grid-cols-[160px_auto] grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
     <div class="lg:order-2 lg:justify-self-center">
-        <p class="text-brun-25 text-base lg:text-3xl font-bold font-outfit uppercase pb-4">CASA NO. 17</p>
+        <p id="outfit" class="text-brun-25 text-base lg:text-3xl font-bold uppercase pb-6">CASA NO. 17</p>
         <nav>
-            <ul class="flex flex-col gap-2">
-                <li><Link href="/priser" variant="menu-footer", size="footer" class="link-underline-hover link-underline-25 link-underline-bottom-0 font-agrandir">Priser</Link></li>
-                <li><Link href="/galleri" variant="menu-footer", size="footer" class="link-underline-hover link-underline-25 link-underline-bottom-0 font-agrandir">Galleri</Link></li>
-                <li><Link href="/om-os" variant="menu-footer", size="footer" class="link-underline-hover link-underline-25 link-underline-bottom-0 font-agrandir">Om os</Link></li>
-                <li><Link href="/om-os" variant="menu-footer", size="footer" class="link-underline-hover link-underline-25 link-underline-bottom-0 font-agrandir">Kontakt</Link></li>
+            <ul id="agrandir" class="flex flex-col gap-2">
+                <li><Link href="/priser" variant="menu-footer", size="footer" class="link-underline-hover link-underline-25 link-underline-bottom-0" style={{ fontFamily: 'agrandir, sans-serif' }}>Priser</Link></li>
+                <li><Link href="/galleri" variant="menu-footer", size="footer" class="link-underline-hover link-underline-25 link-underline-bottom-0" style={{ fontFamily: 'agrandir, sans-serif' }}>Galleri</Link></li>
+                <li><Link href="/om-os" variant="menu-footer", size="footer" class="link-underline-hover link-underline-25 link-underline-bottom-0" style={{ fontFamily: 'agrandir, sans-serif' }}>Om os</Link></li>
+                <li><Link href="/om-os" variant="menu-footer", size="footer" class="link-underline-hover link-underline-25 link-underline-bottom-0" style={{ fontFamily: 'agrandir, sans-serif' }}>Kontakt</Link></li>
                 <li><Link href="https://salonbook.one/?casa17#/" target="_blank" variant="footer", size="footer">Book tid</Link></li>
             </ul>
         </nav>
     </div>
     <div class="lg:order-4 lg:justify-self-center">
-        <p class="text-brun-25 text-base lg:text-3xl font-bold font-outfit uppercase pb-6">Kontakt</p>
-        <address class="text-brun-25 not-italic text-sm lg:text-base font-agrandir flex flex-col gap-3.5">
+        <p id="outfit" class="text-brun-25 text-base lg:text-3xl font-bold uppercase pb-6">Kontakt</p>
+        <address class="text-brun-25 not-italic text-sm lg:text-base flex flex-col gap-3.5">
             <Link href="https://maps.app.goo.gl/ycvebqFF2aEwhLdu6" size="footer" variant="footer"
             target="_blank"
             rel="noopener noreferrer">
-                <span>Blågårdsgade 17</span><br>
-                <span>2200 København N</span>
+                <span id="agrandir">Blågårdsgade 17</span><br>
+                <span id="agrandir">2200 København N</span>
             </Link>
-            <Link href="tel:+4535350080" size="footer" variant="footer">Tlf. 3535 0080</Link>
-            <Link href="mailto:Vedstedcamilla@gmail.com" size="footer" variant="footer">Vedstedcamilla@gmail.com</Link>
+            <Link href="tel:+4535350080" size="footer" variant="footer" style={{ fontFamily: 'agrandir, sans-serif' }}>Tlf. 3535 0080</Link>
+            <Link href="mailto:Vedstedcamilla@gmail.com" size="footer" variant="footer" style={{ fontFamily: 'agrandir, sans-serif' }}>Vedstedcamilla@gmail.com</Link>
         </address>
         <div class="flex gap-8 pt-5">
             <Link href="https://www.instagram.com/casa_no_17/" target="_blank" class="transition-transform duration-200 active:scale-105 hover:scale-105">
@@ -54,15 +54,15 @@ import facebook from '../assets/images/facebook.svg';
         </div>
     </div>
     <div class="lg:order-3 lg:justify-self-center">
-        <p class="text-brun-25 text-base lg:text-3xl font-bold font-outfit uppercase pb-6">Åbningstider</p>
+        <p id="outfit" class="text-brun-25 text-base lg:text-3xl font-bold uppercase pb-6">Åbningstider</p>
         <ul class="flex flex-col gap-2">
-            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base font-agrandir">Mandag: lukket</li>
-            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base font-agrandir">Tirsdag: 10.00 - 18.00</li>
-            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base font-agrandir">Onsdag: 10.00 - 18.00</li>
-            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base font-agrandir">Torsdag: 10.00 - 19.00</li>
-            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base font-agrandir">Fredag: 10.00 - 18.00</li>
-            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base font-agrandir">Lørdag: 9.00 - 13.00</li>
-            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base font-agrandir">Søndag: lukket</li>
+            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base">Mandag: lukket</li>
+            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base">Tirsdag: 10.00 - 18.00</li>
+            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base">Onsdag: 10.00 - 18.00</li>
+            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base">Torsdag: 10.00 - 19.00</li>
+            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base">Fredag: 10.00 - 18.00</li>
+            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base">Lørdag: 9.00 - 13.00</li>
+            <li class="items-center gap-1 text-brun-25 text-sm lg:text-base">Søndag: lukket</li>
         </ul>
     </div>
     <div class="flex flex-col justify-end lg:justify-start gap-8 lg:order-1 lg:justify-self-center">
@@ -75,9 +75,18 @@ import facebook from '../assets/images/facebook.svg';
                 <span class="sr-only">Gå til Casa No 17s forside</span>
             </div>
         </Link>
-        <p class="text-brun-25 text-sm lg:text-base font-agrandir">© 2025 Frisør Casa No. 17.<br>Alle rettigheder forbeholdes.</p>
+        <p class="text-brun-25 text-sm lg:text-base">© 2025 Frisør Casa No. 17.<br>Alle rettigheder forbeholdes.</p>
     </div>
 </div>
 
+<style>
+    p, #agrandir, ul {
+        font-family: agrandir;
+    }
 
+    #outfit {
+        font-family: outfit;
+        font-weight: 700;
+    }
+</style>
 

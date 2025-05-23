@@ -11,7 +11,7 @@ const { url="#", cardimagealt="", navn="", dato="", review="" } = Astro.props;
         <div class="grid grid-cols-[1fr_4fr] gap-4">
             <Image src={Profil} alt={cardimagealt} loading="lazy"/>
             <div>
-                <p class="text-base	font-outfit">{navn}</h2>
+                <h6 class="text-base">{navn}</h6>
                 <p class="text-[12px]">{dato}</p>
             </div>
         </div>
@@ -26,3 +26,13 @@ const { url="#", cardimagealt="", navn="", dato="", review="" } = Astro.props;
     <Image src={Google} alt="Google" loading="lazy"/>
     </a>
 </article>
+
+<style>
+    h6 {
+        font-family: outfit;
+        font-weight: 400;
+    }
+    p {
+        font-family: agrandir;
+    }
+</style>

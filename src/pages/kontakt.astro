@@ -15,7 +15,7 @@ import billede from "../assets/images/stemingsbillede.webp";
             <!-- Border Grafik -->
             <div class="flex-grow border-t border-brun-900 min-w-6"></div>
             <h1
-            class="text-4xl lg:text-6xl uppercase font-bold font-outfit px-[16px]">
+            class="text-4xl lg:text-6xl uppercase px-[16px]">
             Kontakt
             </h1>
             <!-- Border Grafik -->
@@ -25,28 +25,28 @@ import billede from "../assets/images/stemingsbillede.webp";
         <div class="lg:grid lg:grid-cols-2 lg:gap-36">
             <div>
                 <section id="Kontakt os" class="mb-5">
-                    <h2 class="text-3xl lg:text-5xl uppercase font-bold font-outfit mb-11 lg:mb-6">Kontakt os</h2>
-                    <div class="font-agrandir text-sm lg:text-base mb-4">
+                    <h2 class="text-3xl lg:text-5xl uppercase mb-11 lg:mb-6">Kontakt os</h2>
+                    <div class="text-sm lg:text-base mb-4">
                         <p>Har du spørgsmål eller lignende, så kontakt mig.</p>
                         <p>Du er også velkommen til at kigge forbi.</p>
                     </div>
                 
                         <address class="not-italic flex flex-col gap-3.5">
                             <div>
-                                <p class="text-brun-900 text-sm lg:text-base font-agrandir font-normal normal-case">Blågårdsgade 17</p>
-                                <p class="text-brun-900 text-sm lg:text-base font-agrandir font-normal normal-case">2200 København N</p>
+                                <p class="text-brun-900 text-sm lg:text-base font-normal normal-case">Blågårdsgade 17</p>
+                                <p class="text-brun-900 text-sm lg:text-base font-normal normal-case">2200 København N</p>
                             </div>
                         </address>
 
-                        <h3 class="text-sm lg:text-base font-outfit uppercase font-bold mt-4 mb-6">Kontakt mig via:</h3>
+                        <h3 class="text-sm lg:text-base uppercase mt-4 mb-6">Kontakt mig via:</h3>
                         <div class="flex flex-col gap-5 lg:flex-row lg:gap-16">
                             <Link href="tel:+4535350080" class="transition-transform duration-200 active:scale-105 hover:scale-105 text-brun-900 text-sm lg:text-base font-normal normal-case flex items-center gap-4">
                                 <Image src={phone} alt="Lys Instagram ikon der fører videre til Instagram" loading="lazy"></Image>
-                                <p class="font-agrandir capitalize">Tlf. 3535 0080</p>
+                                <p class="capitalize">Tlf. 3535 0080</p>
                             </Link>
                             <Link href="mailto:Vedstedcamilla@gmail.com" class="transition-transform duration-200 active:scale-105 hover:scale-105 text-brun-900 text-sm lg:text-base font-normal normal-case flex items-center gap-4">
                                 <Image src={mail} alt="Lys Instagram ikon der fører videre til Instagram" loading="lazy"></Image>
-                                <p class="font-agrandir capitalize">Vedstedcamilla@gmail.com</p>
+                                <p class="capitalize">Vedstedcamilla@gmail.com</p>
                             </Link>
                         </div>
                 </section>
@@ -77,24 +77,23 @@ import billede from "../assets/images/stemingsbillede.webp";
             <section id="Email form" class="mt-6 lg:mt-0">
                 <form name="kontakt" data-netlify="true">
                         <div class="mb-9">
-                            <label for="text" class="text-brun-900 font-outfit font-bold text-base lg:text-2xl uppercase">Navn <span class="text-red-700">*</span></label>
-                            <input type="text" id="text" class="mt-5 h-14 rounded-[5px] shadow-md shadow-brun-900/50 border-none text-brun-900 text-sm lg:text-base focus:ring-brun-500 focus:border-brun-500 w-full p-2.5 font-agrandir placeholder:text-brun-900/30" placeholder="Skriv dit fulde navn" required />
+                            <label id="outfit" for="text" class="text-brun-900 text-base lg:text-2xl uppercase">Navn <span class="text-red-700">*</span></label>
+                            <input type="text" id="text" class="mt-5 h-14 rounded-[5px] shadow-md shadow-brun-900/50 border-none text-brun-900 text-sm lg:text-base focus:ring-brun-500 focus:border-brun-500 w-full p-2.5 placeholder:text-brun-900/30" placeholder="Skriv dit fulde navn" required />
                         </div>
 
                         <div class="mb-9">
-                            <label for="text" class="text-brun-900 font-outfit font-bold text-base lg:text-2xl uppercase">Email <span class="text-red-700">*</span></label>
-                            <input type="text" id="text" class="mt-5 h-14 rounded-[5px] shadow-md shadow-brun-900/50 border-none text-brun-900 text-sm lg:text-base focus:ring-brun-500 focus:border-brun-500 w-full p-2.5 font-agrandir placeholder:text-brun-900/30" placeholder="Skriv din email" required />
+                            <label id="outfit" for="text" class="text-brun-900 text-base lg:text-2xl uppercase">Email <span class="text-red-700">*</span></label>
+                            <input type="text" id="text" class="mt-5 h-14 rounded-[5px] shadow-md shadow-brun-900/50 border-none text-brun-900 text-sm lg:text-base focus:ring-brun-500 focus:border-brun-500 w-full p-2.5 placeholder:text-brun-900/30" placeholder="Skriv din email" required />
                         </div>
 
                         <div class="mb-9">
-                            <label for="text" class="text-brun-900 font-outfit font-bold text-base lg:text-2xl uppercase">Telefonummer <span class="text-red-700">*</span></label>
-                            <input type="text" id="text" class="mt-5 h-14 rounded-[5px] shadow-md shadow-brun-900/50 border-none text-brun-900 text-sm lg:text-base focus:ring-brun-500 focus:border-brun-500 w-full p-2.5 font-agrandir placeholder:text-brun-900/30" placeholder="Skriv dit telefon nummer" required />
+                            <label id="outfit" for="text" class="text-brun-900 text-base lg:text-2xl uppercase">Telefonummer <span class="text-red-700">*</span></label>
+                            <input type="text" id="text" class="mt-5 h-14 rounded-[5px] shadow-md shadow-brun-900/50 border-none text-brun-900 text-sm lg:text-base focus:ring-brun-500 focus:border-brun-500 w-full p-2.5 placeholder:text-brun-900/30" placeholder="Skriv dit telefon nummer" required />
                         </div>
 
                         <label>
-                            <label for="text" class="text-brun-900 font-outfit font-bold text-base lg:text-2xl uppercase">Besked <span class="text-red-700">*</span></label>
-                            <textarea class="field-sizing-content mt-5 min-h-[200px] rounded-[5px] shadow-md shadow-brun-900/50 border-none text-brun-900 text-sm lg:text-base focus:ring-brun-500 focus:border-brun-500 w-full p-2.5 font-agrandir placeholder:text-brun-900/30" placeholder="Skriv din besked her..." required>
-                            </textarea>
+                            <label id="outfit" for="text" class="text-brun-900 text-base lg:text-2xl uppercase">Besked <span class="text-red-700">*</span></label>
+                            <textarea class="field-sizing-content mt-5 min-h-[200px] rounded-[5px] shadow-md shadow-brun-900/50 border-none text-brun-900 text-sm lg:text-base focus:ring-brun-500 focus:border-brun-500 w-full p-2.5 placeholder:text-brun-900/30" placeholder="Skriv din besked her" required></textarea>
                           </label>
                 </form>
 
@@ -107,7 +106,15 @@ import billede from "../assets/images/stemingsbillede.webp";
 </MainLayout>
 
 <style>
-    p {
-        font-family: agrandir;
-    }
+    h1, h2, h3, #outfit {
+    font-family: outfit;
+    font-weight: 700;
+  }
+  p {
+    font-family: agrandir;
+  }
+
+  input::placeholder, textarea::placeholder {
+  font-family: agrandir;
+}
 </style>

@@ -9,9 +9,20 @@ const { url="#", cardimage="", cardimagealt="", titel="", target="" } = Astro.pr
              <img src={cardimage} alt={cardimagealt} loading="lazy">
         </div>
         <div class="absolute bottom-0 w-full bg-gradient-to-t from-brun-900 to-transparent p-6">
-            <p class="text-2xl uppercase font-outfit font-bold">{titel}</p>
+            <h4 class="text-2xl uppercase font-outfit font-bold">{titel}</h4>
           <hr class="border-brun-25 my-2" />
           <p class="text-base hover:opacity-80 hover:underline font-agrandir">Læs mere</a>
     </div>
 </div>
 </a>
+
+<style>
+    h4 {
+        font-family: outfit;
+        font-weight: 700;
+    }
+
+    p {
+        font-family: agrandir;
+    }
+</style>
