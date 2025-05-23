@@ -187,11 +187,7 @@ import Evo from "../assets/images/evo.svg";
       <div class="flex items-center px-10 lg:px-20">
         <div class="flex-grow border-t border-brun-25"></div>
         <span class="px-4 max-w-[110px] items-center">
-          <Image
-            src={Saks}
-            alt="Saks der bevæger sig"
-            loading="lazy"
-          />
+          <Image src={Saks} alt="Saks der bevæger sig" loading="lazy" />
         </span>
         <div class="flex-grow border-t border-brun-25"></div>
       </div>
@@ -204,25 +200,24 @@ import Evo from "../assets/images/evo.svg";
         >
           <HoverPic
             image="../img/billede_1.webp"
-            imagealt="Et billede der viser hvordan et Juniorklip 6-12 år ser ud"
-            navn="Juniorklip 6-12 år"
+            imagealt="Billedet illustrerer en mand med kort brunt hår og mørk t-shirt."
+            beskrivelse="Herreklip"
           />
           <HoverPic
             image="../img/billede_2.webp"
-            imagealt="Et billede der viser hvordan striber i top/reperation ser ud"
-            navn="Striber i top/reperation"
+            imagealt="Billedet viser kvinde med håret flettet og pynt i. Hun har en hvid kjole på."
+            beskrivelse="Håropsætning til bryllup"
           />
           <HoverPic
             image="../img/billede_3.webp"
-            imagealt="Et billede der viser hvordan et dameklip m. vask/føn ser ud"
-            navn="Dameklip m. vask/føn"
+            imagealt="Billedet viser en kvinde med lyserødt hår og en hvid t-shirt på."
+            beskrivelse="Helfarve"
           />
           <div class="md:hidden">
             <HoverPic
-              image="../images/g4.png"
-              imagealt="Et billede der viser hvordan striber i top/reperation samt dameklip m. vask/føn ser ud"
-              navn="Striber i top/reperation"
-              beskrivelse="Dameklip m. vask/føn"
+              image="../img/billede_4.webp"
+              imagealt="Billedet viser en kvinde med blond bølget hår. Hun har hvid kjole på."
+              beskrivelse="Helfarve & dameklip"
             />
           </div>
         </div>
@@ -280,7 +275,9 @@ import Evo from "../assets/images/evo.svg";
 </MainLayout>
 
 <style>
-  h1, h2, h5 {
+  h1,
+  h2,
+  h5 {
     font-family: outfit;
     font-weight: 700;
   }
